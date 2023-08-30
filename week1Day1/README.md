@@ -1,5 +1,3 @@
-## Developer
-
-Ifeoma Eleweke
+**Developer:** Ifeoma Eleweke
 
 **_This is for documentation_**
