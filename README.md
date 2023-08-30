@@ -1,2 +1,3 @@
-# front-end-web-dev
-This for my Front-End Web Development Class in Westcliff University
+# Front-End Web Development
+
+This is for my Front-End Web Development Class in Westcliff University
