@@ -3,9 +3,19 @@
 <head>
     <!-- Webpage Title -->
     <title>My First Page</title>
-    <!-- Tells our webpage where to look for the styling configurations -->
-    <!-- Basically referencing the CSS style sheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Embedded Style Method -->
+    <style>
+        header {
+            /* Places image as background */
+            /* "no-repeat" means I don't want the image in a tiled format */
+            background: url(images/central_park.jpg) 0 -200px no-repeat;
+            /* change background size */
+            background-size: 1500px;
+            /* Sets the header height */
+            height: 400px;
+            /* background-position 0 -200px */
+        }
+    </style>
 </head>
 
 <body>
@@ -26,8 +36,6 @@
         <main>
             <h1>My First Heading</h1>
             <p>This is my first paragraph of information</p>
-            <!-- Adding an image -->
-            <img src="central_park.jpg" alt="Central Park in Winter" width="500">
         </main>
         <!-- Footer -->
         <footer>&copy; Copyright 2023</footer>
