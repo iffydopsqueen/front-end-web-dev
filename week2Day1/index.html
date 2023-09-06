@@ -19,6 +19,45 @@
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        li {
+            list-style-type: none;
+            display: inline;
+            padding: 0 20px;
+        }
+
+        li a {
+            /* Remove the underline in the hyperlink */
+            text-decoration: none;
+        }
+
+        li a:link {
+            color: #000;
+            /* To change the blue color it has before it is clicked to "black" instead */
+        }
+
+        li a:visited {
+            color: #818db3;
+            /* To change the blue color it has when clicked to "#818db3" instead */
+        }
+
+        li a:hover {
+            color: #333;
+            /* When the mouse is hovered over the text, change to this color, "#333" */
+        }
+
+        li a:active {
+            color: #753a30;
+            /* When the mouse is down, change to this color, "#753a30" */
+        }
+
+        nav {
+            /* Change the background color using the RGB - Red Green Blue format */
+            background-color: rgb(255, 245, 238);
+            height: 50px;
+            text-align: center;
+            padding-top: 2px;
+        }
     </style>
 </head>
 
