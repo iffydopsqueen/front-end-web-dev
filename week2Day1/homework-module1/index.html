@@ -1,0 +1,268 @@
+<html>
+
+<head>
+    <!-- Webpage Title -->
+    <title>Great Cliffs of California</title>
+    <meta charset="utf-8">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Embed Style Method -->
+    <style>
+        /* Header */
+        header {
+            /* Styling for the header */
+            width: 100%;
+            min-height: 400px;
+            padding-top: 3em;
+        }
+
+        #home header {
+            /* Use the "cliff" image as a background */
+            background: no-repeat lightgrey url(images/cliff_ocean.jpg);
+            background-size: 1500px;
+        }
+
+        .main-header {
+            /* Style the main header box that contains the logo and navigation labels */
+            background-color: rgb(255, 255, 255, 0.8);
+            width: 700px;
+            margin: 2em auto 0 auto;
+            min-height: 100px;
+            height: 100px;
+        }
+
+        .main-header .logo img {
+            /* Re-position the logo graphic within the main header box */
+            width: 100px;
+            height: 100px;
+            margin: 0 2em 0 0;
+            float: left;
+        }
+
+        /* Navigation */
+        .main-menu {
+            /* Re-position the navigation menu within the main header box */
+            margin-left: 227px;
+            font-weight: 400;
+        }
+
+        .main-menu ul li {
+            /* Remove the navigation label bullets and make them appear horizontal instead of vertical, 
+            Create a faint vertical line border */
+            list-style-type: none;
+            display: inline-block;
+            float: left;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-left: 1px solid rgba(202, 204, 202, 0.6);
+            line-height: 100px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .main-menu ul li a {
+            /* Modify the look of the hypertext links and get rid of the underlines */
+            text-decoration: none;
+            color: #888;
+        }
+
+        .main-menu ul li a:hover {
+            /* Change the font color of the links and create a mouse hovering effect */
+            color: #9ed034;
+        }
+
+        .main-menu ul li.active {
+            /* Highlight the home button when a user is on the page */
+            background: #9ed034;
+            border: none;
+        }
+
+        .main-menu ul li.active a {
+            /* Highlight the home button when a user is on the page - Adds a status indicator */
+            color: #fff;
+        }
+
+        /* Main */
+        main h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #9ed034;
+            padding-top: 440px;
+        }
+
+        main h3 {
+            padding-top: 15px;
+        }
+
+        /* Partners */
+        section {
+            width: 100%;
+            background-color: #4288c3;
+        }
+
+        section #partners {
+            /* Center the logos/icons within the section area */
+            width: 1200px;
+            padding: 2em 0 2em 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section #partners .partner {
+            /* Make each partner's logo/icon to appear within a circular shape */
+            display: inline-block;
+            margin: 0 0.75em;
+            padding: 1.3em 1.5em;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        section #partners .partner img {
+            width: 90px;
+            height: 90px;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            height: 155px;
+            padding-bottom: 1em;
+            background-color: #ecfab8;
+        }
+
+        /* Position the copyright on the left and social media on the right */
+        footer #nondisclaimer .copy {
+            padding: 3.5em 3.5em 3.5em 13em;
+            float: left;
+            font-size: 0.9em;
+        }
+
+        footer #nondisclaimer .social {
+            padding: 2.5em;
+            margin-right: 9.25em;
+            float: right;
+        }
+
+        /* Forcing the disclaimer to the bottom of the page */
+        footer #disclaimer {
+            clear: both;
+        }
+
+        footer #disclaimer p {
+            font-size: 0.85em;
+            text-align: center;
+        }
+
+        /* Styling the "font awesome"  social medias to appear as icons and also a hover effect */
+        footer #nondisclaimer .social .fa {
+            padding: 15px;
+            font-size: 15px;
+            width: 15px;
+            text-align: center;
+            text-decoration: none;
+            margin: 0 4px;
+            border-radius: 50%;
+        }
+
+        footer #nondisclaimer .social .fa:hover {
+            opacity: 0.7;
+        }
+
+        /* Styling the social media icons to appear in round shapes */
+        footer #nondisclaimer .social .fa-facebook {
+            background: #3b5998;
+            color: white;
+        }
+
+        footer #nondisclaimer .social .fa-twitter {
+            background: #55acee;
+            color: white;
+        }
+
+        footer #nondisclaimer .social .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="home">
+    <div id="container">
+        <header>
+            <div class="main-header">
+                <!-- Logo container -->
+                <div class="logo">
+                    <!-- Added only width because we want to scale down by half of the original dimension -->
+                    <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+                </div>
+                <!-- Main menu navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <!-- The purpose of the "class=active" is to style the home button to be highlighted when users are on that page -->
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li>Cliffs</li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- Main content -->
+                <main>
+                    <h2>Introducing California's Greatest Cliffs</h2>
+                    <h3>What is so unique about California cliffs?</h3>
+                    <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and
+                        beautiful as them. And California is the only state that have cliffs that fronts all possible
+                        environments: sea,river, mountains and canyons. There are four such individual unique cliffs:
+                        West Cliff, North
+                        Cliff, East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas,
+                        camping
+                        sites, wildlife watch spots and overnight cabins.</p>
+                    <h3>Where are these cliffs?</h3>
+                    <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily.
+                        The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
+                </main>
+                <!-- Sections -->
+                <section>
+                    <ul id="partners">
+                        <li class="partner">
+                            <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+                        </li>
+                    </ul>
+                </section>
+                <!-- Footer -->
+                <footer>
+                    <!-- Non-disclaimer footer -->
+                    <div id="nondisclaimer">
+                        <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+                        <div class="social">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </div>
+                    </div>
+                    <!-- Disclaimer footer -->
+                    <div id="disclaimer">
+                        <p>This website is designed and created solely for educational purposes only at Westcliff
+                            University.
+                            All contents are not intended for any commercial gain or use.</p>
+                    </div>
+                </footer>
+            </div>
+        </header>
+    </div>
+</body>
+
+</html>

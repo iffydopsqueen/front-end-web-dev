@@ -1,0 +1,116 @@
+header {
+    /* Places image as background */
+    /* "no-repeat" means I don't want the image in a tiled format */
+    /* background-position = 0 -200px */
+    background: url(images/central_park.jpg) 0 -200px no-repeat;
+    /* change background size */
+    background-size: 1500px;
+    /* Sets the header height */
+    height: 400px;
+    padding-top: 100px;
+    padding-left: 100px;
+    font-weight: bold; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+    padding: 0 20px;
+}
+
+li a {
+    /* Remove the underline in the hyperlink */
+    text-decoration: none;
+}
+
+li a:link {
+    color: #000;
+    /* To change the blue color it has before it is clicked to "black" instead */
+}
+
+li a:visited {
+    color: #818db3;
+    /* To change the blue color it has when clicked to "#818db3" instead */
+}
+
+li a:hover {
+    color: #333;
+    /* When the mouse is hovered over the text, change to this color, "#333" */
+}
+
+li a:active {
+    color: #753a30;
+    /* When the mouse is down, change to this color, "#753a30" */
+}
+
+nav {
+    /* Change the background color using the RGB - Red Green Blue format */
+    background-color: rgb(255, 245, 238);
+    height: 50px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+main {
+    margin: 50px;
+}
+
+main h1 {
+    color: rgb(129, 141, 179);
+    font-family: Arial;
+}
+
+table {
+    margin-top: 35px;
+}
+
+table, caption, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    width: 150px;
+    height: 35px;
+    text-align: center;
+}
+
+caption {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: large;
+    height: 40px;
+    padding-top: 15px;
+    color: #753a30;
+}
+
+label {
+    display: block;
+    margin: 15px 0 0 0;
+}
+
+input {
+    width: 300px;
+}
+
+input[type="radio"] {
+    width: 25px;
+}
+
+textarea {
+    width: 300px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px 0 10px 0;
+    width: 100px;
+}
+
+footer {
+    height: 40px;
+    background-color: rgb(129, 141, 179);
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(211, 218, 240);
+}
