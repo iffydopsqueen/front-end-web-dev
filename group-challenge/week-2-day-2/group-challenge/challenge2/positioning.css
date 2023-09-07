@@ -11,8 +11,6 @@ h1 {
    margin-top: 0;
 }
 
-
-
 #wrapper {
    margin: 0 auto;
    padding: 10px 30px;
@@ -25,5 +23,12 @@ h1 {
 
 img {
    border: 2px solid black;
+   position: absolute; /* Add absolute positioning to the images */
 }
 
+/* THIS PART IS NOT COMPLETE */
+/* Position the second image on top of the first one */
+img:nth-child(2) {
+   top: 0; /* Stack the second image at the top */
+   left: 0; /* Stack the second image at the left */
+}
