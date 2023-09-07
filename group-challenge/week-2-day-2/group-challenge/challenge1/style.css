@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+.container {
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    border-radius: 2px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.55);
+    background: #512626;
+    color: #fff;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.card {
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background: #E27474;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 55px;
+}
+
+div.card:hover {
+    position: relative;
+    border: 3px solid #000;
+    font-size: small;
+}
+
+.day {
+    display: block;
+    line-height: 120%;
+}
+
+.number {
+    display: block;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100%;
+}
