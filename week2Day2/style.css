@@ -78,9 +78,33 @@ th, td {
 caption {
     text-transform: uppercase;
     font-weight: bolder;
+    font-size: large;
     height: 40px;
     padding-top: 15px;
     color: #753a30;
+}
+
+label {
+    display: block;
+    margin: 15px 0 0 0;
+}
+
+input {
+    width: 300px;
+}
+
+input[type="radio"] {
+    width: 25px;
+}
+
+textarea {
+    width: 300px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px 0 10px 0;
+    width: 100px;
 }
 
 footer {
