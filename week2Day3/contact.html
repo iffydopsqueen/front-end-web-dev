@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+        <!-- Main Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt_pets.html">Adoptable Pets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Main Content -->
+        <main>
+            <img src="images/german_shepherd_playiing.jpeg" alt="Local Pet Adoption - German Shepherd Playing"
+                width="350">
+            <p>If you have any question about a specific pet or our adoption policies, or to even make inquiries, please
+                contact us directly using the form below:</p>
+            <form action="/contact" method="post">
+                <fieldset>
+                    <legend style="font-weight: bold;">Contact Information</legend>
+                    <label>First Name*</label><br>
+                    <input type="text" name="first_name"><br>
+                    <label>Last Name*</label><br>
+                    <input type="text" name="last_name"><br>
+                    <label>Email*</label><br>
+                    <input type="email" name="email"><br>
+                    <label>What is your message regarding?</label><br>
+                    <select name="message_title">
+                        <option>Pet Listings</option>
+                        <option>Rehome, lost or found pets</option>
+                        <option>Concerns regarding rescued pets</option>
+                        <option>All other requests</option>
+                    </select><br>
+                    <textarea cols="40" rows="5"></textarea><br>
+                    <input type="submit" value="Send"><br>
+                </fieldset>
+            </form>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <!-- Non-disclaimer footer -->
+            <div id="nondisclaimer">
+                <div class="copy">&copy; Copyright 2023</div>
+                <div class="social">
+                    <img src="images/social_media.jpeg" alt="Social Media - Facebook, Instagram, Twitter">
+                </div>
+            </div>
+            <!-- Disclaimer footer -->
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff
+                    University.
+                    All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
