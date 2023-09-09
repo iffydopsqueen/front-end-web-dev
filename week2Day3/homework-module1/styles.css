@@ -24,6 +24,12 @@ header {
     background-size: 100%;
 }
 
+#cliffs header {
+    /* Use the "cliff_rock" image as a background */
+    background: no-repeat lightgrey url(images/forest_cliff.jpeg);
+    background-size: 100%;
+}
+
 .main-header {
     /* Style the main header box that contains the logo and navigation labels */
     background-color: rgb(255, 255, 255, 0.8);
