@@ -12,6 +12,18 @@ header {
     background-size: 100%;
 }
 
+#activities header {
+     /* Use the "runfly" image as a background */
+     background: no-repeat lightgrey url(images/runfly.jpeg);
+     background-size: 100%;
+}
+
+#contact header {
+    /* Use the "cliff_rock" image as a background */
+    background: no-repeat lightgrey url(images/cliff_rock.jpeg);
+    background-size: 100%;
+}
+
 .main-header {
     /* Style the main header box that contains the logo and navigation labels */
     background-color: rgb(255, 255, 255, 0.8);
