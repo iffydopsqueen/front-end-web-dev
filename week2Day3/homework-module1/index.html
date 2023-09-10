@@ -2,7 +2,7 @@
 
 <head>
     <!-- Webpage Title -->
-    <title>Contact Us</title>
+    <title>Great Cliffs of California</title>
     <meta charset="utf-8">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body id="contact">
+<body id="home">
     <div id="container">
         <header>
             <div class="main-header">
@@ -22,74 +22,29 @@
                 <!-- Main menu navigation -->
                 <nav class="main-menu">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>Cliffs</li>
+                        <!-- The purpose of the "class=active" is to style the home button to be highlighted when users are on that page -->
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="cliffs.html">Cliffs</li>
                         <li><a href="activities.html">Activities</a></li>
-                        <li class="active"><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <!-- Main content -->
-        <main>
-            <h1>Contacting Us</h1>
-            <p>
-                You can drop by the visitors information center at the cliff site that you plan on visiting. They are
-                open 7 days a week from 8.00AM to 5.00PM. You can also contact us directly if you need additional
-                information
-                about the Cliffs, Hours of Operations, Facilities or questions about this site using one of the
-                following:
-            </p>
-
-            <div class="contactinfo">
-                <div class="phone">
-                    <span>Phone:</span>
-                    <span>(800)GCLIFFS</span>
-                </div>
-                <div class="email">
-                    <span>Email:</span>
-                    <span>info@greatcliffs.com</span>
-                </div>
-            </div>
-
-            <form action="/contact" method="post">
-                <fieldset>
-                    <legend>Contact Form</legend>
-                    <div class="textbox">
-                        <label>Name:</label>
-                        <input type="text" name="name" placeholder="John Doe">
-                        <label>Email:</label>
-                        <input type="email" name="email" placeholder="johndoe@gmail.com">
-                        <label>Phone:</label>
-                        <input type="text" name="phone" placeholder="xxx-xxx-xxxx">
-                    </div>
-
-                    <div class="radios">
-                        <label>How should we contact you?</label>
-                        <input type="radio" name="contact" value="email" checked>Email
-                        <input type="radio" name="contact" value="phone">Phone
-                    </div>
-
-                    <div class="selectmenu">
-                        <label>Which Cliff are you inquiring?</label>
-                        <select>
-                            <option>West Cliff</option>
-                            <option>North Cliff</option>
-                            <option>East Cliff</option>
-                            <option>South Cliff</option>
-                        </select>
-                    </div>
-
-                    <div class="commentbox">
-                        <label>How did you hear about us:</label>
-                        <textarea></textarea>
-                    </div>
-
-                    <div class="button">
-                        <input type="submit" value="Inquire">
-                    </div>
-                </fieldset>
-            </form>
+        <main class="main-content">
+            <h2>Introducing California's Greatest Cliffs</h2>
+            <h3>What is so unique about California cliffs?</h3>
+            <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and
+                beautiful as them. And California is the only state that have cliffs that fronts all possible
+                environments: sea,river, mountains and canyons. There are four such individual unique cliffs:
+                West Cliff, North
+                Cliff, East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas,
+                camping
+                sites, wildlife watch spots and overnight cabins.</p>
+            <h3>Where are these cliffs?</h3>
+            <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily.
+                The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
         </main>
         <!-- Sections -->
         <section>
