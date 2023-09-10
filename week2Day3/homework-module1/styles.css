@@ -103,7 +103,7 @@ main h2 {
 
 /* Cliffs Images */
 .image-grid {
-    margin-left: 90px; /* Move the images to the center */
+    margin-left: 80px; /* Move the images to the center */
     margin-top: 25px;  /* The space between the paragraph and the images */
 }
 
@@ -129,6 +129,7 @@ main h2 {
     width: 100%;   /* Caption box should fill the image */
     text-align: center;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
 /* Partners */
