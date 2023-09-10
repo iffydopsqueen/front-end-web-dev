@@ -100,7 +100,37 @@ main h2 {
 .main-content {
     margin: 50px;
 }
+
+/* Cliffs Images */
+.image-grid {
+    margin-left: 90px; /* Move the images to the center */
+    margin-top: 25px;  /* The space between the paragraph and the images */
+}
+
+.image-grid img {
+    max-width: 550px; /* Limit the image width to 200 pixels */
+    max-height: 500px; /* Limit the image height to 150 pixels */
+    align-items: center;
+    text-align: center;
+}  
+
+.image-container {
+    position: relative;   /* Create a positioning context for captions */
+    margin: 15px;   /* The space/gap between the images */ 
+    display: inline-block;  /* Have more than one image in a line */
+}
   
+.caption {
+    position: absolute;
+    top: 0; /* Place caption at the top of the image */
+    background-color: #852b1b;
+    color: white; 
+    padding: 10px;  /* The height of the border box */
+    width: 100%;   /* Caption box should fill the image */
+    text-align: center;
+    box-sizing: border-box;
+}
+
 /* Partners */
 section {
     width: 100%;
