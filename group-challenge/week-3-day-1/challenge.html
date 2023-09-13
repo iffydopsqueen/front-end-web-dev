@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Recipes</title>
+</head>
+
+<body>
+    <h1>Recipes</h1>
+
+    <script>
+        // Set the time of day
+        var currentTime = "sunset"; // Change this to "sunset" for the dinner recipe
+
+        // Function to display the lunch recipe
+        function displayLunchRecipe() {
+            document.write("<h2>Lunch Recipe</h2><ul><li>Step 1: Prepare ingredients</li><li>Step 2: Cook the meal</li><li>Step 3: Season to taste</li><li>Step 4: Serve hot</li><li>Step 5: Enjoy your meal!</li></ul>");
+        }
+
+        // Function to display the dinner recipe
+        function displayDinnerRecipe() {
+            document.write("<h2>Dinner Recipe</h2><ul><li>Step 1: Gather ingredients</li><li>Step 2: Cook the dish</li><li>Step 3: Add garnishes</li><li>Step 4: Serve with love</li><li>Step 5: Bon appétit!</li></ul>");
+        }
+
+        // Check the time and display the appropriate recipe
+        if (currentTime === "noon") {
+            displayLunchRecipe();
+        } else if (currentTime === "sunset") {
+            displayDinnerRecipe();
+        } else {
+            document.write("<p>Invalid time. No recipe to display</p>");
+        }
+    </script>
+</body>
+
+</html>
