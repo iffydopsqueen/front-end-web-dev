@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Create a CSS file for styling -->
+</head>
+
+<body>
+    <ul id="photo-list">
+        <!-- List of photos -->
+        <li id="photo"><img src="images/gallery/beagles-laying-in-the-shade.jpeg"></li>
+        <li id="photo"><img src="images/gallery/bulldog-inglese.jpeg"></li>
+        <li id="photo"><img src="images/gallery/chihuahua-breed.jpg"></li>
+        <li id="photo"><img src="images/gallery/clapton-the-poodle.jpeg"></li>
+        <li id="photo"><img src="images/gallery/dachshund-dog-breed.jpg"></li>
+        <li id="photo"><img src="images/gallery/diana-the-poodle.jpeg"></li>
+        <li id="photo"><img src="images/gallery/german-shepherd-breed.jpg"></li>
+        <li id="photo"><img src="images/gallery/golden-retriever-breed.jpeg"></li>
+        <li id="photo"><img src="images/gallery/labrador-retriever-breed.jpeg"></li>
+        <li id="photo"><img src="images/gallery/rottweiler-breed.jpg"></li>
+        <li id="photo"><img src="images/gallery/siberian-husky-breed.jpg"></li>
+        <li id="photo"><img src="images/gallery/yorkshire-terrier-on-deck.jpeg"></li>
+    </ul>
+    <script>
+        // Define my photo data
+        var photoData = [
+            { src: 'images/gallery/beagles-laying-in-the-shade.jpeg', caption: 'Beagles', description: 'Beagles standing in the cold' },
+            { src: 'images/gallery/bulldog-inglese.jpg', caption: 'Bulldog', description: 'Bulldog Inglese' },
+            { src: 'images/gallery/chihuahua-breed.jpg', caption: 'Chihuahua', description: 'Chihuahua' },
+            { src: 'images/gallery/clapton-the-poodle.jpeg', caption: 'Poodle', description: 'Clapton the Poodle in the water' },
+            { src: 'images/gallery/dachshund-dog-breed.jpg', caption: 'Dachshund', description: 'Dachshund' },
+            { src: 'images/gallery/diana-the-poodle.jpeg', caption: 'Poodle', description: 'Diana the Poodle' },
+            { src: 'images/gallery/german-shepherd-breed.jpg', caption: 'German Shepherd', description: 'German Shepherd' },
+            { src: 'images/gallery/golden-retriever-breed.jpeg', caption: 'Golden Retriever', description: 'Golden Retriever' },
+            { src: 'images/gallery/labrador-retriever-breed.jpeg', caption: 'Labrador Retriever', description: 'Labrador Retriever' },
+            { src: 'images/gallery/rottweiler-breed.jpg', caption: 'Rottweiler', description: 'Rottweiler' },
+            { src: 'images/gallery/siberian-husky-breed.jpg', caption: 'Siberian Husky', description: 'Siberian Husky' },
+            { src: 'images/gallery/yorkshire-terrier-on-deck.jpeg', caption: 'Yorkshire Terrier', description: 'Yorkshire Terrier sitting on the deck' },
+        ];
+
+        // Get the photo list element
+        const photoList = document.getElementById('photo-list');
+
+        // Loop through the photo data and create list items
+        for (var i = 0; i < photoData.length; i++) {
+            var photo = photoData[i];
+            var listItem = document.createElement('li');
+            listItem.classList.add('photo');
+            listItem.innerHTML = `
+                <img src="${photo.src}" alt="Photo ${i + 1}">
+                <div class="caption">${photo.caption}</div>
+                <div class="description">${photo.description}</div>
+            `;
+            photoList.appendChild(listItem);
+        }
+    </script>
+</body>
+
+</html>

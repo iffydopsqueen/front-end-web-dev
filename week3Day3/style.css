@@ -1,0 +1,219 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the entire page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styles */
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu ul {
+    list-style: none;
+}
+
+.main-menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Main Content styles */
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, caption, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+caption {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: larger;
+    height: 30px;
+    padding-top: 15px;
+    color: #753a30;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#nondisclaimer, #disclaimer {
+    text-align: center;
+}
+
+.copy {
+    font-size: 14px;
+}
+
+.social {
+    margin-top: 10px;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Gallery */
+
+/* Set up the basic styles for the gallery */
+ul #photo-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    visibility: hidden;
+}
+
+ul #photo-list li {
+    width: calc(33.33% - 10px); /* Adjust as needed for your layout */
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style the caption and description */
+ul #photo-list .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+ul #photo-list .description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+}
+
+/* Show description on hover */
+ul #photo-list li:hover .description {
+    visibility: visible;
+}
+
+ul #photo-list li:hover .caption {
+    opacity: 1;
+}
+
