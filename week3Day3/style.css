@@ -162,6 +162,66 @@ input[type="submit"]:hover {
     background-color: #555;
 }
 
+/* Gallery */
+.main-container p {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+/* Set up the basic styles for the gallery */
 
+/* Styles for the photo list */
+.image-container ul .photo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
+/* Styling for each photo */
+.image-container ul .photo-list li .photo {
+    margin-right: 10px;
+    position: relative;
+}
+
+/* Styling for the photos inside the list */
+.image-container ul .photo-list li .photo img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Styling for captions */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+/* Show caption on hover */
+.photo:hover .caption {
+    display: block;
+}
+
+/* Styling for descriptions */
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+/* Show description on hover */
+.photo:hover .description {
+    visibility: visible;
+}
