@@ -163,6 +163,11 @@ input[type="submit"]:hover {
 }
 
 /* Gallery */
+/* Position the image container (needed to position the left and right arrows) */
+.photo-list {
+    position: relative;
+}
+
 .main-container p {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -181,12 +186,78 @@ input[type="submit"]:hover {
 .image-container ul .photo-list li .photo {
     margin-right: 10px;
     position: relative;
+    display: none;
 }
 
 /* Styling for the photos inside the list */
 .image-container ul .photo-list li .photo img {
     width: 100%;
     cursor: pointer;
+}
+
+.image-container ul .photo-list li .photo .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.image-container ul .photo-list:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Twelve columns side by side */
+.image-container ul .photo-list li .photo {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+  
+.active, .demo:hover {
+    opacity: 1;
 }
 
 /* Styling for captions */
