@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Create a CSS file for styling -->
+</head>
+
+<body>
+    <ul id="photo-list">
+        <!-- List of photos -->
+        <li id="photo"><img src="images/winterland1.jpg"></li>
+        <li id="photo"><img src="images/winterland2.jpg"></li>
+        <li id="photo"><img src="images/winterland3.jpg"></li>
+        <li id="photo"><img src="images/winterland4.jpg"></li>
+        <li id="photo"><img src="images/winterland5.jpg"></li>
+        <li id="photo"><img src="images/winterland6.jpg"></li>
+    </ul>
+    <script>
+        // Define my photo data
+        var photoData = [
+            { src: 'photo1.jpg', caption: 'Photo 1 Caption', description: 'Description for Photo 1' },
+            { src: 'photo2.jpg', caption: 'Photo 2 Caption', description: 'Description for Photo 2' },
+            // Add more photos here
+        ];
+
+        // Get the photo list element
+        const photoList = document.getElementById('photo-list');
+
+        // Loop through the photo data and create list items
+        for (var i = 0; i < photoData.length; i++) {
+            var photo = photoData[i];
+            var listItem = document.createElement('li');
+            listItem.classList.add('photo');
+            listItem.innerHTML = `
+                <img src="${photo.src}" alt="Photo ${i + 1}">
+                <div class="caption">${photo.caption}</div>
+                <div class="description">${photo.description}</div>
+            `;
+            photoList.appendChild(listItem);
+        }
+    </script>
+</body>
+
+</html>
