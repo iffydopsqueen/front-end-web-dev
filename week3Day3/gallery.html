@@ -1,8 +1,12 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Create a CSS file for styling -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- For our CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -22,54 +26,71 @@
         </header>
         <!-- Main Content -->
         <main>
-            <ul id="photo-list">
-                <!-- List of photos -->
-                <li id="photo"><img src="images/gallery/beagles-laying-in-the-shade.jpeg"></li>
-                <li id="photo"><img src="images/gallery/bulldog-inglese.jpeg"></li>
-                <li id="photo"><img src="images/gallery/chihuahua-breed.jpeg"></li>
-                <li id="photo"><img src="images/gallery/clapton-the-poodle.jpeg"></li>
-                <li id="photo"><img src="images/gallery/dachshund-dog-breed.jpg"></li>
-                <li id="photo"><img src="images/gallery/diana-the-poodle.jpeg"></li>
-                <li id="photo"><img src="images/gallery/german-shepherd-breed.jpg"></li>
-                <li id="photo"><img src="images/gallery/golden-retriever-breed.jpeg"></li>
-                <li id="photo"><img src="images/gallery/labrador-retriever-breed.jpeg"></li>
-                <li id="photo"><img src="images/gallery/rottweiler-breed.jpg"></li>
-                <li id="photo"><img src="images/gallery/siberian-husky-breed.jpg"></li>
-                <li id="photo"><img src="images/gallery/yorkshire-terrier-on-deck.jpeg"></li>
-            </ul>
+            <!-- Container for the image gallery -->
+            <div class="container">
+                <!-- List to hold photos -->
+                <ul class="photo-list">
+                    <!-- Each photo is represented as a list item -->
+                    <li class="photo"><img src="images/gallery/beagles-laying-in-the-shade.jpeg"></li>
+                    <li class="photo"><img src="images/gallery/bulldog-inglese.jpeg"></li>
+                    <li class="photo"><img src="images/gallery/chihuahua-breed.jpeg"></li>
+                    <li class="photo"><img src="images/gallery/clapton-the-poodle.jpeg"></li>
+                    <li class="photo"><img src="images/gallery/dachshund-dog-breed.jpg"></li>
+                    <li class="photo"><img src="images/gallery/diana-the-poodle.jpeg"></li>
+                    <li class="photo"><img src="images/gallery/german-shepherd-breed.jpg"></li>
+                    <li class="photo"><img src="images/gallery/golden-retriever-breed.jpeg"></li>
+                    <li class="photo"><img src="images/gallery/labrador-retriever-breed.jpeg"></li>
+                    <li class="photo"><img src="images/gallery/rottweiler-breed.jpg"></li>
+                    <li class="photo"><img src="images/gallery/siberian-husky-breed.jpg"></li>
+                    <li class="photo"><img src="images/gallery/yorkshire-terrier-on-deck.jpeg"></li>
+                </ul>
+            </div>
         </main>
+        <!-- Footer -->
+        <footer>
+            <!-- Non-disclaimer footer -->
+            <div id="nondisclaimer">
+                <div class="copy">&copy; 2023 Adoptable Pets</div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <!-- Disclaimer footer -->
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff
+                    University.
+                    All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
     </div> <!-- End Container -->
     <script>
-        // Define my photo data
-        var photoData = [
-            { src: 'images/gallery/beagles-laying-in-the-shade.jpeg', caption: 'Beagles', description: 'Beagles standing in the cold' },
-            { src: 'images/gallery/bulldog-inglese.jpg', caption: 'Bulldog', description: 'Bulldog Inglese' },
-            { src: 'images/gallery/chihuahua-breed.jpeg', caption: 'Chihuahua', description: 'Chihuahua' },
-            { src: 'images/gallery/clapton-the-poodle.jpeg', caption: 'Poodle', description: 'Clapton the Poodle in the water' },
-            { src: 'images/gallery/dachshund-dog-breed.jpg', caption: 'Dachshund', description: 'Dachshund' },
-            { src: 'images/gallery/diana-the-poodle.jpeg', caption: 'Poodle', description: 'Diana the Poodle' },
-            { src: 'images/gallery/german-shepherd-breed.jpg', caption: 'German Shepherd', description: 'German Shepherd' },
-            { src: 'images/gallery/golden-retriever-breed.jpeg', caption: 'Golden Retriever', description: 'Golden Retriever' },
-            { src: 'images/gallery/labrador-retriever-breed.jpeg', caption: 'Labrador Retriever', description: 'Labrador Retriever' },
-            { src: 'images/gallery/rottweiler-breed.jpg', caption: 'Rottweiler', description: 'Rottweiler' },
-            { src: 'images/gallery/siberian-husky-breed.jpg', caption: 'Siberian Husky', description: 'Siberian Husky' },
-            { src: 'images/gallery/yorkshire-terrier-on-deck.jpeg', caption: 'Yorkshire Terrier', description: 'Yorkshire Terrier sitting on the deck' },
-        ];
+        // Array to hold captions for each photo
+        var captions = ['Beagle', 'Bulldog', 'Chihuahua', 'Poodle', 'Dachshund', 'Poodle', 'German Shepherd', 'Golden Retriever', 'Labrador Retriever', 'Rottweiler', 'Siberian Husky', 'Yorkshire Terrier'];
+        // Array to hold descriptions for each photo
+        var descriptions = ['A Bbeagle laying in the shade of a tree', 'An English bulldog', 'Sad looking chihuahua', 'Clapton the poodle in the water', 'A long-bodied dachshund dog standing in a field', 'Diana the poodle standing on a beach', 'A German shepherd dog standing in the grass', 'A golden retriever sitting in a park', 'A Labrador retriever dog standing close to a river', 'A happy Rottweiler standing in the field', 'A Siberian husky standing on a rock', 'A Yorkshire terrier laying on a boat deck'];
 
-        // Get the photo list element
-        const photoList = document.getElementById('photo-list');
+        // Get all photo elements
+        var photoList = document.getElementById('photo-list');
 
-        // Loop through the photo data and create list items
-        for (var i = 0; i < photoData.length; i++) {
-            var photo = photoData[i];
-            var listItem = document.createElement('li');
-            listItem.classList.add('photo');
-            listItem.innerHTML = `
-                <img src="${photo.src}" alt="Photo ${i + 1}">
-                <div class="caption">${photo.caption}</div>
-                <div class="description">${photo.description}</div>
-            `;
-            photoList.appendChild(listItem);
+        // Iterate through each photo
+        for (var i = 0; i < photoList.length; i++) {
+            // Get the current photo and its image
+            var photo = photoList[i];
+            var img = photo.querySelector('img');
+
+            // Create and add caption for the photo
+            var caption = document.createElement('div');
+            caption.className = 'caption';
+            caption.innerText = (i + 1) + ' / 12 - ' + captions[i];
+            photo.appendChild(caption);
+
+            // Create and add description for the photo
+            var description = document.createElement('div');
+            description.className = 'description';
+            description.innerText = descriptions[i];
+            photo.appendChild(description);
         }
     </script>
 </body>
