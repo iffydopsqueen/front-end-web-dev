@@ -94,24 +94,26 @@
         <!-- Sections -->
         <section>
             <ul id="partners">
+                <!--
                 <li class="partner">
-                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                    <img src="images/partners/partner1.png" alt="Partner Bus Tours">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                    <img src="images/partners/partner2.png" alt="Partner Cabin Rental">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                    <img src="images/partners/partner3.png" alt="Partner Camping Adventure">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+                    <img src="images/partners/partner4.png" alt="Partner College Tours">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                    <img src="images/partners/partner5.png" alt="Partner Bike Rentals">
                 </li>
                 <li class="partner">
-                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+                    <img src="images/partners/partner6.png" alt="Partner Tour Group">
                 </li>
+                -->
             </ul>
         </section>
         <!-- Footer -->
@@ -133,6 +135,28 @@
             </div>
         </footer>
     </div>
+    <!-- JavaScript Codes -->
+    <!-- This is added at the bottom of the page because JS are not needed until the page is fully loaded. -->
+    <script>
+        // Display the partners image
+        var photos = [];  // An array to store image element
+        var imageNames = [];   // An array to store image filename
+        var imageList = [];    // An array to store HTML list that contains image
+        var image;      // A variable to store the assembled image list codes
+        var openList = "<li class='partner'>";   // A variable to contain the open list tag
+        var closeList = "</li>";     // A variable to contain the close list tag
+
+        // A loop to create the 6 partner images 
+        for (var i = 0; i < 6; i++) {
+            imageNames.push("partner" + (i + 1));   // Create image filename and store in the array
+            photos.push("<img src='images/partners/" + imageNames[i] + ".png'>");   //Assembling the image filename into a large element
+            image = openList + photos[i] + closeList;   // Assemble image element 
+            imageList.push(image);    // Store the image element into an array 
+        }
+
+        // Display all six partner images
+        document.getElementById("partners").innerHTML = imageList;
+    </script>
 </body>
 
 </html>
