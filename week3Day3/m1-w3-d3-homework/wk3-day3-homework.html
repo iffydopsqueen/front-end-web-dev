@@ -58,12 +58,13 @@
 
 
   <script>
-
+    // Function to square a number and display the result
     function squareNumber(num) {
       var squaredNumber = num * num;
       document.getElementById("solution").innerHTML = 'The result of squaring the number ' + num + ' is ' + squaredNumber;
     }
 
+    // Event listener for squaring a number
     var squareButton = document.getElementById("square-button");
     squareButton.addEventListener("click", function () {
       var num = document.getElementById("square-input").value;
@@ -76,7 +77,54 @@
 
     /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
 
+    // Function to calculate half of a number and display the result
+    function halfNumber(num) {
+      var half = num / 2;
+      document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + half;
+    }
 
+    // Event listener for calculating half of a number
+    var halfButton = document.getElementById("half-button");
+    halfButton.addEventListener("click", function () {
+      var num = document.getElementById("half-input").value;
+      halfNumber(num);
+    });
+
+    // Function to calculate percentage and display the result
+    function calculatePercentage() {
+      var percent1 = document.getElementById("percent1-input").value;
+      var percent2 = document.getElementById("percent2-input").value;
+      var result = (percent1 / percent2) * 100;
+      document.getElementById("solution").innerHTML = percent1 + ' is ' + result + '% of ' + percent2;
+    }
+
+    // Event listener for calculating percentage
+    var percentButton = document.getElementById("percent-button");
+    percentButton.addEventListener("click", calculatePercentage);
+
+    // Function to get the integer part of a number and display the result
+    function integerNumber(num) {
+      var integer = Math.ceil(num);
+      document.getElementById("solution").innerHTML = 'The integer part of ' + num + ' is ' + integer;
+    }
+
+    // Event listener for getting the integer part of a number
+    var integerButton = document.getElementById("int-button");
+    integerButton.addEventListener("click", function () {
+      var num = document.getElementById("int-input").value;
+      integerNumber(num);
+    });
+
+    // Function to calculate the area of a circle and display the result
+    function calculateCircleArea() {
+      var radius = document.getElementById("area-input").value;
+      var area = Math.PI * radius * radius;
+      document.getElementById("solution").innerHTML = 'The area of a circle with radius ' + radius + ' is ' + area;
+    }
+
+    // Event listener for calculating the area of a circle
+    var areaButton = document.getElementById("area-button");
+    areaButton.addEventListener("click", calculateCircleArea);
   </script>
 </body>
 
