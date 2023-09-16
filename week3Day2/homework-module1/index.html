@@ -54,6 +54,7 @@
         <!-- Sections -->
         <section>
             <ul id="partners">
+                <!--
                 <li class="partner">
                     <img src="images/partners/partner1.png" alt="Partner Bus Tours">
                 </li>
@@ -72,6 +73,7 @@
                 <li class="partner">
                     <img src="images/partners/partner6.png" alt="Partner Tour Group">
                 </li>
+                -->
             </ul>
         </section>
         <!-- Footer -->
@@ -167,6 +169,24 @@
         // Initial run of time data function
         currentTime();
 
+
+        // Display the partners image
+        var photos = [];  // An array to store image element
+        var imageNames = [];   // An array to store image filename
+        var imageList = [];    // An array to store HTML list that contains image
+        var image;
+        var openList = "<li class='partner'>";
+        var closeList = "</li>";
+
+        for (var i = 0; i < 6; i++) {
+            imageNames.push("partner" + (i + 1));
+            photos.push("<img src='images/partners/" + imageNames[i] + ".png'>");
+            image = openList + photos[i] + closeList;
+            imageList.push(image);
+        }
+
+        // Display all six images
+        document.getElementById("partners").innerHTML = imageList;
     </script>
 </body>
 
