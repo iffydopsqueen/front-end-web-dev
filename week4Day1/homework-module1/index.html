@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <!-- Webpage Title -->
+    <title>Great Cliffs of California</title>
+    <meta charset="utf-8">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link my CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="home">
+    <div id="container">
+        <header>
+            <div class="main-header">
+                <!-- Logo container -->
+                <div class="logo">
+                    <!-- Added only width because we want to scale down by half of the original dimension -->
+                    <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+                </div>
+                <!-- Main menu navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <!-- The purpose of the "class=active" is to style the home button to be highlighted when users are on that page -->
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="cliffs.html">Cliffs</li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Sections -->
+        <section id="timeofday">
+            <span>Your Current Local Time: </span>
+            <span id="clock"></span>
+        </section>
+        <!-- Main content -->
+        <main class="main-content">
+            <h2>Introducing California's Greatest Cliffs</h2>
+            <h3>What is so unique about California cliffs?</h3>
+            <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and
+                beautiful as them. And California is the only state that have cliffs that fronts all possible
+                environments: sea,river, mountains and canyons. There are four such individual unique cliffs:
+                West Cliff, North
+                Cliff, East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas,
+                camping
+                sites, wildlife watch spots and overnight cabins.</p>
+            <h3>Where are these cliffs?</h3>
+            <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily.
+                The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
+        </main>
+        <!-- Sections -->
+        <section>
+            <ul id="partners">
+                <!--
+                <li class="partner">
+                    <img src="images/partners/partner1.png" alt="Partner Bus Tours">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner2.png" alt="Partner Cabin Rental">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner3.png" alt="Partner Camping Adventure">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner4.png" alt="Partner College Tours">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner5.png" alt="Partner Bike Rentals">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner6.png" alt="Partner Tour Group">
+                </li>
+                -->
+            </ul>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <!-- Non-disclaimer footer -->
+            <div id="nondisclaimer">
+                <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <!-- Disclaimer footer -->
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff
+                    University.
+                    All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- JavaScript Codes -->
+    <!-- This is added at the bottom of the page because JS are not needed until the page is fully loaded. -->
+    <script>
+        // Create a time data function 
+        function currentTime() {
+            // Declare variables
+            var d = new Date();          // Get current date 
+            var hr = d.getHours();       // Get current hours 
+            var min = d.getMinutes();   // Get current minutes 
+            var sec = d.getSeconds();   // Get current seconds 
+            var ampm;                  // Declare empty variable to store AM or PM
+
+            // Add 0 to single digits for seconds 
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+
+            // Add 0 to single digits for minutes 
+            if (min < 10) {
+                min = "0" + min;
+            }
+
+            // Convert Greenwich Mean Time from military time to standard time
+            var utchr = d.getUTCHours();    // Get current Greenwich Mean Time (GMT)
+            if (utchr > 12) {
+                utchr -= 12;
+            }
+
+            // Calculate time difference between GMT hour and local hour
+            var timeDiff;    // To store time difference between GMT hour and Local hour
+            timeDiff = utchr - hr;
+
+            // Convert time difference, if negative, to positive (adjusted time difference)
+            var adjTimeDiff;   // To store time difference converted to positive number
+            adjTimeDiff = Math.abs(timeDiff);
+
+            // Check which time zone based on the converted time difference between GMT Hour and Local Hour
+            var timeZone;    // to store the 4 time zones (PST,MST,CST,EST)
+
+            if (adjTimeDiff === 0) {
+                timeZone = "GMT";
+            } else if (adjTimeDiff === 3) {
+                timeZone = "PST";
+            } else if (adjTimeDiff === 2) {
+                timeZone = "MST";
+            } else if (adjTimeDiff === 1) {
+                timeZone = "CST";
+            } else {
+                timeZone = "EST";
+            }
+
+            // Determine AM or PM string 
+            if (hr == 12) {
+                ampm = "PM";    // Set to PM
+            } else if (hr > 12) {
+                hr -= 12;      // Deduct 12 from hours greater than 12 (military time)
+                ampm = "PM";   // Set to PM
+            } else {
+                ampm = "AM";   // Set to AM
+            }
+
+            // Assemble time format to display with time zone
+            var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
+
+            // Display current local time and time zone on HTML elements 
+            document.getElementById("clock").innerText = time;   // adding time 
+
+            // Run time data function every 1 second 
+            setInterval(currentTime, 1000);    // setting timer
+        }
+
+        // Initial run of time data function
+        currentTime();
+
+
+        // Display the partners image
+        var photos = [];  // An array to store image element
+        var imageNames = [];   // An array to store image filename
+        var imageList = [];    // An array to store HTML list that contains image
+        var image;      // A variable to store the assembled image list codes
+        var openList = "<li class='partner'>";   // A variable to contain the open list tag
+        var closeList = "</li>";     // A variable to contain the close list tag
+
+        // A loop to create the 6 partner images 
+        for (var i = 0; i < 6; i++) {
+            imageNames.push("partner" + (i + 1));   // Create image filename and store in the array
+            photos.push("<img src='images/partners/" + imageNames[i] + ".png'>");   //Assembling the image filename into a large element
+            image = openList + photos[i] + closeList;   // Assemble image element 
+            imageList.push(image);    // Store the image element into an array 
+        }
+
+        // Join the imageList elements into a single string
+        var imageListString = imageList.join('');   // Removes the commas (,) after each images 
+
+        // Display all six images
+        document.getElementById("partners").innerHTML = imageListString;
+    </script>
+</body>
+
+</html>
