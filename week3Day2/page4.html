@@ -55,8 +55,11 @@
             imageList.push(image);     // Store the image element code into an array 
         }
 
+        // Join the imageList elements into a single string
+        var imageListString = imageList.join('');   // Removes the commas (,) after each images 
+
         // Display all six images
-        document.getElementById("album").innerHTML = imageList;
+        document.getElementById("album").innerHTML = imageListString;
     </script>
 </body>
 <!-- Not good practice to leave spaces within a tag -->

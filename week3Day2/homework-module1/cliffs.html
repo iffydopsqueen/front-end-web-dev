@@ -125,8 +125,11 @@
             imageList.push(image);    // Store the image element into an array 
         }
 
-        // Display all six partner images
-        document.getElementById("partners").innerHTML = imageList;
+        // Join the imageList elements into a single string
+        var imageListString = imageList.join('');   // Removes the commas (,) after each images 
+
+        // Display all six images
+        document.getElementById("partners").innerHTML = imageListString;
     </script>
 </body>
 

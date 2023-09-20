@@ -66,7 +66,7 @@
                             onclick="currentSlide(5)">
                         <div class="numbertext">5 / 12
                     </li>
-                    <li class="photo"><img src="images/gallery/diana-the-poodle.jpeg style=" width:100%"
+                    <li class="photo"><img src="images/gallery/diana-the-poodle.jpeg" style="width:100%"
                             onclick="currentSlide(6)">
                         <div class="numbertext">6 / 12
                     </li>
@@ -78,8 +78,8 @@
                             onclick="currentSlide(8)">
                         <div class="numbertext">8 / 12
                     </li>
-                    <li class="photo"><img src="images/gallery/labrador-retriever-breed.jpeg style=" width:100%"
-                            onclick="currentSlide(9)"">
+                    <li class="photo"><img src="images/gallery/labrador-retriever-breed.jpeg" style="width:100%"
+                            onclick="currentSlide(9)">
                         <div class=" numbertext">9 / 12
                     </li>
                     <li class="photo"><img src="images/gallery/rottweiler-breed.jpg" style="width:100%"
@@ -127,6 +127,7 @@
     </div> <!-- End Container -->
     <script>
         // Gallery functionality
+
         // Initialize the slide index
         var slideIndex = 1;
 
@@ -143,7 +144,6 @@
         // Function to display slides
         function showSlides(n) {
             var slides = document.getElementsByClassName("photo");
-            //var dots = document.getElementsByClassName("demo");
             var captionText = document.getElementById("caption");
 
             // Handle slide index overflow/underflow
@@ -155,22 +155,21 @@
                 slides[i].style.display = "none";
             }
 
-            // Remove active class from all dots
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
             // Display the current slide and update caption
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
+            captionText.innerHTML = captions[slideIndex - 1];
         }
 
+        var openCaptionTag = "<div class='caption'>";  // Opening caption tag
+        var closeCaptionTag = "</div>";  // Closing caption tag
+        var openDescTag = "<div class='description'>";  // Opening description tag
+        var closeDescTag = "</div>";  // Closing description tag
+
         // Array to hold captions for each photo
-        var captions = ['Beagle', 'Bulldog', 'Chihuahua', 'Poodle', 'Dachshund', 'Poodle', 'German Shepherd', 'Golden Retriever', 'Labrador Retriever', 'Rottweiler', 'Siberian Husky', 'Yorkshire Terrier'];
+        var captionTexts = ['Beagle', 'Bulldog', 'Chihuahua', 'Poodle', 'Dachshund', 'Poodle', 'German Shepherd', 'Golden Retriever', 'Labrador Retriever', 'Rottweiler', 'Siberian Husky', 'Yorkshire Terrier'];
 
         // Array to hold descriptions for each photo
-        var descriptions = ['A beagle laying in the shade of a tree', 'An English bulldog', 'Sad looking chihuahua', 'Clapton the poodle in the water', 'A long-bodied dachshund dog standing in a field', 'Diana the poodle standing on a beach', 'A German shepherd dog standing in the grass', 'A golden retriever sitting in a park', 'A Labrador retriever dog standing close to a river', 'A happy Rottweiler standing in the field', 'A Siberian husky standing on a rock', 'A Yorkshire terrier laying on a boat deck'];
+        var descTexts = ['A beagle laying in the shade of a tree', 'An English bulldog', 'Sad looking chihuahua', 'Clapton the poodle in the water', 'A long-bodied dachshund dog standing in a field', 'Diana the poodle standing on a beach', 'A German shepherd dog standing in the grass', 'A golden retriever sitting in a park', 'A Labrador retriever dog standing close to a river', 'A happy Rottweiler standing in the field', 'A Siberian husky standing on a rock', 'A Yorkshire terrier laying on a boat deck'];
 
         // Get all elements with class 'photo'
         var photos = document.querySelectorAll('.photo');
@@ -184,13 +183,13 @@
             // Create and add caption for the photo
             var caption = document.createElement('div');
             caption.className = 'caption';
-            caption.innerText = (i + 1) + ' / 12 - ' + captions[i];
+            caption.innerHTML = openCaptionTag + captionTexts[i] + closeCaptionTag;
             photo.appendChild(caption);
 
             // Create and add description for the photo
             var description = document.createElement('div');
             description.className = 'description';
-            description.innerText = descriptions[i];
+            description.innerHTML = openDescTag + descTexts[i] + closeDescTag;
             photo.appendChild(description);
         }
     </script>
