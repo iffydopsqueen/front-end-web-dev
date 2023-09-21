@@ -8,7 +8,7 @@ var closeList = "</li>";     // A variable to contain the close list tag
 
 // A loop to create the 6 partner images 
 for (var i = 0; i < 6; i++) {
-    imageNames.push("partner" + (i + 1));   // Create image filename and store in the array
+    imageNames.push("partner-" + (i + 1));   // Create image filename and store in the array
     photos.push("<img src='images/partners/" + imageNames[i] + ".png'>");   //Assembling the image filename into a large element
     image = openList + photos[i] + closeList;   // Assemble image element 
     imageList.push(image);    // Store the image element into an array 
