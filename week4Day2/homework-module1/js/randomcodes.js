@@ -2,18 +2,19 @@
 
 // NOTE: "submit" button is initially disabled upon loading of this page - see <body> in html
 
-var getCode = ' ';   // to store entered code 
+var getCode = '';   // to store entered code 
 var btnValue;     // for button boolean value
+
+// Create variables to store generated codes and the type of characters we want to show as codes 
+var code = '';   // to store generated codes and initialize to empty value
+
+// create variable to hold the type of characters we want to show as codes 
+var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
 
 // Function to generate combination of characters 
 function generateCode() {
-    // Create variables to store generated codes and the type of characters we want to show as codes 
-    var code = ' ';   // to store generated codes and initialize to empty value
-    // create variable to hold the type of characters we want to show as codes 
-    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
-
     // Generate characters multiple times using a loop
-    for (i =1; i <= 8; i++) {
+    for (var i = 1; i <= 8; i++) {
         var char = Math.random() * str.length;    // randomly select a character from the variable and then store in a new variable 
         code += str.charAt(char);     // accumulate the generated character into a string of 8 characters
     }
@@ -37,10 +38,6 @@ function disableButton(btnValue) {
     }
 }
 
-// listen to user input code 
-var codeBox = document.getElementById("codeentered");    // get textbox 
-codeBox.addEventListener("input", evaluateCode);  // listen to code entered in textbox
-
 // run function if detected user had entered a character in textbox 
 function evaluateCode() {
     getCode = document.getElementById("codeentered").value;   // get character entered 
@@ -48,7 +45,11 @@ function evaluateCode() {
     var charset2 = code.trim();    // remove any hidden characters generated 
 
     // test if code entered matches the number of generated characters 
-    if (charset1.length == charset2.length && charset1 == charset2) {
+    if (charset1.length === charset2.length && charset1 === charset2) {
         disableButton(false);   // if they both match, run the function to enable button 
-    }
+    } 
 }
+
+// listen to user input code 
+var codeBox = document.getElementById("codeentered");    // get textbox 
+codeBox.addEventListener("input", evaluateCode);  // listen to code entered in textbox 
