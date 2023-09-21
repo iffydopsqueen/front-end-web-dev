@@ -330,10 +330,11 @@ input[type="submit"] {
     margin: 10px 0 10px 0;
     width: 130px;
     height: 35px;
-    /* background-color: #4977d1; */
+    background-color: #4977d1; 
     color: #fff;
     font-weight: bold;
     font-size: 13px;
+    border: none;
 }
 
 input[type="text"],

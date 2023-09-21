@@ -2,13 +2,13 @@
 
 // NOTE: "submit" button is initially disabled upon loading of this page - see <body> in html
 
+var getCode = ' ';   // to store entered code 
+var btnValue;     // for button boolean value
+
 // Function to generate combination of characters 
 function generateCode() {
     // Create variables to store generated codes and the type of characters we want to show as codes 
     var code = ' ';   // to store generated codes and initialize to empty value
-    var getCode = ' ';   // to store entered code 
-    var btnValue;     // for button boolean value
-
     // create variable to hold the type of characters we want to show as codes 
     var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
 
@@ -25,8 +25,7 @@ document.getElementById("codes").innerHTML = generateCode();
 
 // determine when to able or disable button
 function disableButton(btnValue) {
-    document.getElementById("submit").disabled = btnValue;   // able/disable button
-
+    document.getElementById("submit").disabled = btnValue;   // enable/disable button
     if (btnValue == true) { // test if button is disabled or enabled 
         // set button and label color translucent
         document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
@@ -38,6 +37,18 @@ function disableButton(btnValue) {
     }
 }
 
-// Activate function
-// Side note: If not be invisible if we don't switch off the background color
-disableButton();
+// listen to user input code 
+var codeBox = document.getElementById("codeentered");    // get textbox 
+codeBox.addEventListener("input", evaluateCode);  // listen to code entered in textbox
+
+// run function if detected user had entered a character in textbox 
+function evaluateCode() {
+    getCode = document.getElementById("codeentered").value;   // get character entered 
+    var charset1 = getCode.trim();   // remove any hidden characters entered 
+    var charset2 = code.trim();    // remove any hidden characters generated 
+
+    // test if code entered matches the number of generated characters 
+    if (charset1.length == charset2.length && charset1 == charset2) {
+        disableButton(false);   // if they both match, run the function to enable button 
+    }
+}
