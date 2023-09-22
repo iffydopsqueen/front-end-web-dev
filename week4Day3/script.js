@@ -16,6 +16,11 @@ photos.forEach((photo, index) => {
     img.alt = captionTexts[index];
     caption.textContent = captionTexts[index];
     description.textContent = descTexts[index];
+
+    // Add event listener to description
+    description.addEventListener("click", () => {
+        openInfoBox(captionTexts[index], descTexts[index]);
+    });
 });
 
 // Information box 
@@ -40,6 +45,7 @@ var infoBoxDesc = [
   'A small and elegant toy breed, the Yorkshire Terrier is known for its long, silky coat and confident personality. Despite their size, they are spirited and brave, making them great companions.'
 ];
 
+// Function to open/show the information box
 function openInfoBox(heading, text) {
   infoHeading.innerText = heading;
   infoText.innerText = text;
@@ -50,10 +56,4 @@ function closeInfoBox() {
   infoBox.style.display = 'none';
 }
 
-photos.forEach((photo, index) => {
-    description.addEventListener("click", () => {
-      openInfoBox(captionTexts[index], infoBoxDesc[index]);
-    });
-  });
-  
 closeInfoButton.addEventListener("click", closeInfoBox);
