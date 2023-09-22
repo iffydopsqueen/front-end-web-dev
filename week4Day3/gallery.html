@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- For our CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="main-header">
+                <!-- Main Navigation -->
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adopt-pets.html">Adoptable Pets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main>
+            <div class="main-container">
+                <p>Are you in search of a new best friend? Your quest ends here. Whether your heart longs for the
+                    playful patter of puppy paws, the soft purr of a kitten, the wagging tail of a dog, or the
+                    comforting presence of a cat, our Pet Adoption Gallery is brimming with marvelous pets eagerly
+                    waiting to find their forever homes.</p>
+                <p>If a particular furry face catches your eye and tugs at your heart, we kindly invite you to complete
+                    a pre-adoption application. This simple step marks the beginning of our adoption process, designed
+                    to ensure the perfect match. We believe in the importance of aligning lifestyles and preferences,
+                    ensuring a seamless integration of your new best friend into your life. After all, it's about
+                    finding that special someone who fits just right.</p>
+                <p>Once we review your application and determine a potential match, we'll gladly arrange a meeting for
+                    you and your prospective furry companion. There's nothing quite like that first, magical encounter
+                    when you know you've found your perfect match.</p>
+                <p>Curious about the complete adoption process? Reach out to us here</p>
+            </div>
+            <!-- Container for the image gallery -->
+            <div class="image-container">
+                <!-- List to hold photos -->
+                <ul class="photo-list">
+                    <!-- Each photo is represented as a list item -->
+                    <li class="photo"><img src="images/gallery/beagles-laying-in-the-shade.jpeg" style="width:100%"
+                            onclick="currentSlide(1)">
+                        <div class="numbertext">1 / 12</div>
+                    </li>
+                    <li class="photo"><img src="images/gallery/bulldog-inglese.jpeg" style="width:100%"
+                            onclick="currentSlide(2)">
+                        <div class="numbertext">2 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/chihuahua-breed.jpeg" style="width:100%"
+                            onclick="currentSlide(3)">
+                        <div class="numbertext">3 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/clapton-the-poodle.jpeg" style="width:100%"
+                            onclick="currentSlide(4)">
+                        <div class="numbertext">4 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/dachshund-dog-breed.jpg" style="width:100%"
+                            onclick="currentSlide(5)">
+                        <div class="numbertext">5 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/diana-the-poodle.jpeg" style="width:100%"
+                            onclick="currentSlide(6)">
+                        <div class="numbertext">6 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/german-shepherd-breed.jpg" style="width:100%"
+                            onclick="currentSlide(7)">
+                        <div class="numbertext">7 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/golden-retriever-breed.jpeg" style="width:100%"
+                            onclick="currentSlide(8)">
+                        <div class="numbertext">8 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/labrador-retriever-breed.jpeg" style="width:100%"
+                            onclick="currentSlide(9)">
+                        <div class=" numbertext">9 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/rottweiler-breed.jpg" style="width:100%"
+                            onclick="currentSlide(10)">
+                        <div class="numbertext">10 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/siberian-husky-breed.jpg" style="width:100%"
+                            onclick="currentSlide(11)">
+                        <div class="numbertext">11 / 12
+                    </li>
+                    <li class="photo"><img src="images/gallery/yorkshire-terrier-on-deck.jpeg" style="width:100%"
+                            onclick="currentSlide(12)">
+                        <div class="numbertext">12 / 12
+                    </li>
+                </ul>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Image text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <!-- Non-disclaimer footer -->
+            <div id="nondisclaimer">
+                <div class="copy">&copy; 2023 Adoptable Pets</div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <!-- Disclaimer footer -->
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff
+                    University.
+                    All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+    </div> <!-- End Container -->
+    <script>
+        // Gallery functionality
+
+        // Initialize the slide index
+        var slideIndex = 1;
+
+        // Function to move to the next/previous slide
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Function to move to a specific slide
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // Function to display slides
+        function showSlides(n) {
+            var slides = document.getElementsByClassName("photo");
+            var captionText = document.getElementById("caption");
+
+            // Handle slide index overflow/underflow
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Display the current slide and update caption
+            slides[slideIndex - 1].style.display = "block";
+            captionText.innerHTML = captions[slideIndex - 1];
+        }
+
+        var openCaptionTag = "<div class='caption'>";  // Opening caption tag
+        var closeCaptionTag = "</div>";  // Closing caption tag
+        var openDescTag = "<div class='description'>";  // Opening description tag
+        var closeDescTag = "</div>";  // Closing description tag
+
+        // Array to hold captions for each photo
+        var captionTexts = ['Beagle', 'Bulldog', 'Chihuahua', 'Poodle', 'Dachshund', 'Poodle', 'German Shepherd', 'Golden Retriever', 'Labrador Retriever', 'Rottweiler', 'Siberian Husky', 'Yorkshire Terrier'];
+
+        // Array to hold descriptions for each photo
+        var descTexts = ['A beagle laying in the shade of a tree', 'An English bulldog', 'Sad looking chihuahua', 'Clapton the poodle in the water', 'A long-bodied dachshund dog standing in a field', 'Diana the poodle standing on a beach', 'A German shepherd dog standing in the grass', 'A golden retriever sitting in a park', 'A Labrador retriever dog standing close to a river', 'A happy Rottweiler standing in the field', 'A Siberian husky standing on a rock', 'A Yorkshire terrier laying on a boat deck'];
+
+        // Get all elements with class 'photo'
+        var photos = document.querySelectorAll('.photo');
+
+        // Loop through each 'photo' element
+        for (var i = 0; i < photos.length; i++) {
+            // Get the current photo and its image
+            var photo = photos[i];
+            var img = photo.querySelector('img');
+
+            // Create and add caption for the photo
+            var caption = document.createElement('div');
+            caption.className = 'caption';
+            caption.innerHTML = openCaptionTag + captionTexts[i] + closeCaptionTag;
+            photo.appendChild(caption);
+
+            // Create and add description for the photo
+            var description = document.createElement('div');
+            description.className = 'description';
+            description.innerHTML = openDescTag + descTexts[i] + closeDescTag;
+            photo.appendChild(description);
+        }
+    </script>
+</body>
+
+</html>
