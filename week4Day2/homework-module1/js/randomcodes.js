@@ -3,7 +3,7 @@
 // NOTE: "submit" button is initially disabled upon loading of this page - see <body> in html
 
 var getCode = '';   // to store entered code 
-var btnValue;     // for button boolean value
+var btnValue = false;     // for button boolean value
 
 // Create variables to store generated codes and the type of characters we want to show as codes 
 var code = '';   // to store generated codes and initialize to empty value
