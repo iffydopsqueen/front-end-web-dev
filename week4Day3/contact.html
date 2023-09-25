@@ -41,11 +41,28 @@
                     <input type="email" name="email"><br>
                     <label>What is your message regarding?</label><br>
                     <select name="message_title">
-                        <option>Pet Listings</option>
-                        <option>Rehome, lost or found pets</option>
-                        <option>Concerns regarding rescued pets</option>
-                        <option>All other requests</option>
+                        <option value="default">Select an option</option>
+                        <option value="option1">Pet Listings</option>
+                        <option value="option2">Rehome, lost or found pets</option>
+                        <option value="option3">Concerns regarding rescued pets</option>
+                        <option value="option4">All other requests</option>
                     </select><br>
+                    <div id="option1Input" style="display: none;">
+                        <label>Option 1 Input</label><br>
+                        <input type="text" name="option1_input" placeholder="Enter data for Option 1"><br>
+                    </div>
+                    <div id="option2Input" style="display: none;">
+                        <label>Option 2 Input</label><br>
+                        <input type="text" name="option2_input"><br>
+                    </div>
+                    <div id="option3Input" style="display: none;">
+                        <label>Option 3 Input</label><br>
+                        <input type="text" name="option3_input"><br>
+                    </div>
+                    <div id="option4Input" style="display: none;">
+                        <label>Option 4 Input</label><br>
+                        <input type="text" name="option4_input"><br>
+                    </div>
                     <textarea cols="40" rows="5"></textarea><br>
                     <input type="submit" value="Send"><br>
                 </fieldset>
@@ -70,6 +87,32 @@
             </div>
         </footer>
     </div>
+    <script>
+        var messageTitleSelect = document.getElementById('message_title');
+        var option1Input = document.getElementById('option1Input');
+        var option2Input = document.getElementById('option2Input');
+        var option3Input = document.getElementById('option3Input');
+        var option4Input = document.getElementById('option4Input');
+
+        messageTitleSelect.addEventListener('change', (event) => {
+            var selectedOption = event.target.value;
+
+            option1Input.style.display = 'none';
+            option2Input.style.display = 'none';
+            option3Input.style.display = 'none';
+            option4Input.style.display = 'none';
+
+            if (selectedOption === 'option1') {
+                option1Input.style.display = 'block';
+            } else if (selectedOption === 'option2') {
+                option2Input.style.display = 'block';
+            } else if (selectedOption === 'option3') {
+                option3Input.style.display = 'block';
+            } else if (selectedOption === 'option4') {
+                option4Input.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 
 </html>
