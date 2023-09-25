@@ -252,3 +252,10 @@ input[type="submit"]:hover {
 #close-info:hover {
     color: #ff8080;
 }
+
+/* User Interface Element - Contact Form */
+/* Hide the input boxes by default */
+
+.hidden {
+    display: none;
+}
