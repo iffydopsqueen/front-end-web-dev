@@ -7,7 +7,7 @@ body, h1, h2, p, ul, li, table {
 /* Apply a background color to the entire page */
 body {
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Container styles */
@@ -252,4 +252,10 @@ input[type="submit"]:hover {
 #close-info:hover {
     color: #ff8080;
 }
-  
+
+/* User Interface Element - Contact Form */
+/* Hide the input boxes by default */
+
+.hidden {
+    display: none;
+}

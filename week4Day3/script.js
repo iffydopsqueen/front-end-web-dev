@@ -43,3 +43,33 @@ photos.forEach((photo) => {
     openInfoBox(caption, descriptionText);
   });
 });
+
+/*--------- User Interface Element - Contact Form ---------*/
+
+var messageTitleSelect = document.getElementById('message_title');
+var petListingsInput = document.getElementById('pet_listings_input');
+var rehomeInput = document.getElementById('rehome_input');
+var concernsInput = document.getElementById('concerns_input');
+var otherInput = document.getElementById('other_input');
+
+messageTitleSelect.addEventListener('change', function () {
+    var selectedOption = messageTitleSelect.value;
+
+    // Hide all input boxes
+    petListingsInput.classList.add('hidden');
+    rehomeInput.classList.add('hidden');
+    concernsInput.classList.add('hidden');
+    otherInput.classList.add('hidden');
+
+    // Show the selected input box
+    if (selectedOption === 'pet_listings') {
+        petListingsInput.classList.remove('hidden');
+    } else if (selectedOption === 'rehome') {
+        rehomeInput.classList.remove('hidden');
+    } else if (selectedOption === 'concerns') {
+        concernsInput.classList.remove('hidden');
+    } else if (selectedOption === 'other') {
+        otherInput.classList.remove('hidden');
+    }
+});
+
