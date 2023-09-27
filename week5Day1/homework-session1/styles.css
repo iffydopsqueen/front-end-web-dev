@@ -395,6 +395,16 @@ form .randomcode {
     color: #000;
 }
 
+/* Table Highlight Styling */
 
+/* highlight selected cells */
+td.selected {
+    background-color: #9ed034;
+    color: #fff;
+    cursor: pointer;
+}
 
-
+/* add hand cursor on selectable cells */
+td:not(.not-selectable) {
+    cursor: pointer;
+}
