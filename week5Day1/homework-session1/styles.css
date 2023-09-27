@@ -14,19 +14,19 @@ header {
 
 #activities header {
      /* Use the "runfly" image as a background */
-     background: no-repeat lightgrey url(images/runfly.jpeg);
+     background: no-repeat lightgrey url(images/runfly.jpg);
      background-size: 100%;
 }
 
 #contact header {
     /* Use the "cliff_rock" image as a background */
-    background: no-repeat lightgrey url(images/cliff_rock.jpeg);
+    background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 100%;
 }
 
 #cliffs header {
     /* Use the "cliff_rock" image as a background */
-    background: no-repeat lightgrey url(images/forest_cliff.jpeg);
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
     background-size: 100%;
 }
 
@@ -226,6 +226,7 @@ footer #nondisclaimer .social .fa-instagram {
 table {
     width: 1000px;
     margin: 4em auto 0 auto;
+    margin-bottom: 70px;
 }
 
 caption {
