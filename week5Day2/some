@@ -1,0 +1,29 @@
+<!-- Inside the <tbody> tag -->
+<tr id="showheading">
+    <th>Type</th>
+    <th id="head1"></th>
+    <th id="head2"></th>
+    <th id="head3"></th>
+    <th id="head4"></th>
+</tr>
+<tr id="showcalories">
+    <td>Calories</td>
+    <td id="cal1"></td>
+    <td id="cal2"></td>
+    <td id="cal3"></td>
+    <td id="cal4"></td>
+</tr>
+<tr id="showfat">
+    <td>Fat</td>
+    <td id="fat1"></td>
+    <td id="fat2"></td>
+    <td id="fat3"></td>
+    <td id="fat4"></td>
+</tr>
+<tr id="showven">
+    <td>Vendor</td>
+    <td id="ven1"></td>
+    <td id="ven2"></td>
+    <td id="ven3"></td>
+    <td id="ven4"></td>
+</tr>

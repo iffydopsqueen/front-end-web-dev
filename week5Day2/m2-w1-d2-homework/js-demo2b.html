@@ -3,24 +3,41 @@
 
 <head>
     <title>My Second Web Page</title>
-
     <link rel="stylesheet" href="demo.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
         $(document).ready(function () {
             $("#btn").click(function (event) {
+                // Load JSON data
+                $.getJSON('data.json', function (data) {
+                    // Populate table with data from JSON file
+                    $("#head1").text(data.head1);
+                    $("#head2").text(data.head2);
+                    $("#head3").text(data.head3);
+                    $("#head4").text(data.head4);
 
+                    $("#cal1").text(data.cal1);
+                    $("#cal2").text(data.cal2);
+                    $("#cal3").text(data.cal3);
+                    $("#cal4").text(data.cal4);
+
+                    $("#fat1").text(data.fat1);
+                    $("#fat2").text(data.fat2);
+                    $("#fat3").text(data.fat3);
+                    $("#fat4").text(data.fat4);
+
+                    $("#ven1").text(data.ven1);
+                    $("#ven2").text(data.ven2);
+                    $("#ven3").text(data.ven3);
+                    $("#ven4").text(data.ven4);
+                });
             });
         });
     </script>
 </head>
 
 <body>
-
     <div id="container">
-
         <header>My Web Site Brand</header>
         <nav>
             <ul>
@@ -30,11 +47,9 @@
                 <li><a href="js-demo2c.html">Contact</a></li>
             </ul>
         </nav>
-
         <main>
             <h1>My Second Heading</h1>
             <p>My Second paragraph.</p>
-
             <table>
                 <caption>Calories Comparison of Popular Burgers</caption>
                 <thead>
@@ -72,14 +87,10 @@
                     </tr>
                 </tfoot>
             </table>
-
             <input type="button" id="btn" value="Load Data" style="margin-top:20px;" />
         </main>
-
         <footer>&copy; Copyright 2020</footer>
-
     </div>
-
 </body>
 
 </html>
