@@ -24,7 +24,7 @@ $(document).ready(function() {
                 $('#displaySelected').css("margin-top", "2em");    // add spaces above display box 
 
                 // Append selected activity and cliff site to result
-                $('#result').append("<p>" + content + " at " + cliffSite + "</p>");    // add child element with contents of cell 
+                $('#result').append("<p>" + content + " at <span style='background-color: lightblue;'>" + cliffSite + "</span></p>");    // add child element with contents of cell 
             } else {   
                 // if selected cell don't have class 
                 // Remove the selected activity from result
