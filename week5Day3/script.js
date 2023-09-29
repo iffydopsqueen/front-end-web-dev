@@ -73,3 +73,32 @@ messageTitleSelect.addEventListener('change', function () {
     }
 });
 
+/*--------- Lightbox ---------*/
+
+$(document).ready(function () {
+  // Open lightbox on image click
+  $('.lightbox-toggle img').click(function () {
+      $('.backdrop').animate({ 'opacity': '.50' }, 300, 'linear').css('display', 'block');
+      $('.box').fadeIn();
+
+      // Check if lightbox has an image
+      if ($('.box').contents('img')) {
+          $('.box').contents().remove('img'); // If true, clear image
+      }
+
+      // Get image source
+      var imgSrc = $(this).attr('src');
+
+      // Create a new image element and append it to the lightbox
+      var img = $('<img>').attr('src', imgSrc);
+      $('.box').append(img);
+  });
+
+  /* Click to close lightbox */
+  $('.close, .backdrop').click(function () {
+      $('.backdrop').animate({ 'opacity': '0' }, 300, 'linear', function () {
+          $('.backdrop').css('display', 'none');
+      });
+      $('.box').fadeOut();
+  });
+});
