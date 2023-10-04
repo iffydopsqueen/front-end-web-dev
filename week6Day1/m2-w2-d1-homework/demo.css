@@ -18,6 +18,13 @@ header {
   grid-gap: 1rem;
 }
 
+/* Display 2 columns if is 600px or higher */
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 li {
   list-style-type: none;
   display: inline;
