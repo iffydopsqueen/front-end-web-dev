@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RWD Group Challenge 1</title>
     <style>
-        /* You are not require to add any new styles other than within media queries */
+        /* You are not required to add any new styles other than within media queries */
         .message {
             text-align: center;
             padding: 200px 20px;
@@ -21,17 +21,15 @@
 
         /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 600px) {
-            .message:after {
-                content: " as in..";
+            .message {
                 font-size: 0.5em;
             }
         }
 
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
-            .message:after {
-                content: " Web Design";
-                color: red;
+            .message {
+                content: "Responsive Web Design";
             }
         }
 
@@ -48,7 +46,7 @@
             .message:before {
                 content: "You Are Learning ";
                 color: cyan;
-                font-size: 0.7em;
+                font-size: 2em;
             }
         }
 
@@ -56,17 +54,15 @@
         @media only screen and (min-width: 1200px) {
             .message:before {
                 content: "Learn ";
-                color: #FA11F2;
+                color: pink;
             }
         }
     </style>
 </head>
 
 <body>
-
-    <h2>Change in Message When Viewport is Resize</h2>
+    <h2>Change in Message When Viewport is Resized</h2>
     <p class="message">Responsive</p>
-
 </body>
 
 </html>
