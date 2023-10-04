@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Is the screen larger than 600px? Make it 2 columns */
+    @media (min-width: 600px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-html {
-    font-size: 22px;
-}
-body {
-    padding: 1rem;
-}
-.card {
-  background-color: dodgerblue;
-  color: white;
-  padding: 1rem;
-  height: 4rem;
-}
-.cards {
-  max-width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 1rem;
-}
+    /* Is the screen greater than 900px? Make it 3 columns */
+    @media (min-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-</style>
+    html {
+      font-size: 22px;
+    }
+
+    body {
+      padding: 1rem;
+    }
+
+    .card {
+      background-color: dodgerblue;
+      color: white;
+      padding: 1rem;
+      height: 4rem;
+    }
+
+    .cards {
+      max-width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 1rem;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="cards">
+  <div class="cards">
     <div class="card">ONE</div>
     <div class="card">TWO</div>
     <div class="card">THREE</div>
@@ -40,8 +57,9 @@ body {
     <div class="card">TEN</div>
     <div class="card">ELEVEN</div>
     <div class="card">TWELVE</div>
-</div>
+  </div>
 
 
 </body>
+
 </html>
