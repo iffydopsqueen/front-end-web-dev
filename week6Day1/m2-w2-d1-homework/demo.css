@@ -1,6 +1,7 @@
 header {
     background: url(images/central_park.jpg) 0 -200px no-repeat;  /* place image as background */
-    background-size: 1500px;
+    background-attachment: scroll;   /* image scrolls with the content  */
+    background-size: 1500px;   /* ensures image adjusts its size to fit while maintaining aspect ratio */
     /*background-position: 0 -200px;*/
     /*background-repeat: no-repeat;*/
     height: 400px; /* give header some height to display the background image */
