@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD Group Challenge 2</title>
+    <style>
+        .box1 {
+            grid-area: header;
+            border-radius: 0.2em;
+            background-color:gold;
+        }
+        .box2 {
+            grid-area: head1;
+            border-radius: 0.2em;
+            background-color:lightblue;
+        }
+        .box3 {
+            grid-area: head2;
+            border-radius: 0.2em;
+            background-color:lightblue;
+        }
+        .box4 {
+            grid-area: main1;
+            border-radius: 0.2em;
+            background-color:lightskyblue;
+        }
+        .box5 {
+            grid-area: main2;
+            border-radius: 0.2em;
+            background-color:lightskyblue;
+        }
+        .box6 {
+            grid-area: side;
+            border-radius: 0.2em;
+            background-color:lightsalmon;
+        }
+        .box7 {
+            grid-area: footer;
+            border-radius: 0.2em;
+            background-color:lightgreen;
+        }
+        .container > div {
+            text-align: center;
+            padding: 0.75em;
+            font-size: 1.25em;
+        }
+        .container {
+            grid-gap: 0.25em;
+            background-color:beige;
+            padding: 0.75em;
+            
+            display: grid;
+
+            /* Erase below after completing media queries */
+            grid-template-columns: 1fr 1fr 0.03fr 2fr;
+            grid-template-rows: 100px 5px 50px 250px 5px 175px;
+
+            grid-template-areas: 
+                'header header header header' /* span across 4 columns */
+                '. . . .' /* gutter span across 4 columns */
+                'head1 head2 . side' /* 4 columns */
+                'main1 main2 . side' /* 4 columns */
+                '. . . .' /* gutter span across 4 columns */
+                'footer footer footer footer'; /* span across 4 columns */
+            /* End Erase */
+        }
+
+        /* MEDIA QUERIES */
+        
+        /* Small devices (portrait tablets and phones, upto 766px) */
+        @media only screen and (max-width: 766px) {
+                  
+        }
+        
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+           
+        } 
+        
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+           
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box1">Header</div>
+        <div class="box2">Head 1</div>
+        <div class="box3">Head 2</div>
+        <div class="box4">Main 1</div>
+        <div class="box5">Main 2</div>
+        <div class="box6">Side</div>
+        <div class="box7">Footer</div>
+    </div>
+    
+</body>
+</html>
