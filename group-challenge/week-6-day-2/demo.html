@@ -1,0 +1,73 @@
+<!DOCTYPE <html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="demo.css">
+
+    <style>
+        .container div[class^="col"] {
+            border: 1px solid white;
+            color: white;
+            background: #1e90ff;
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 5px
+        }
+
+        #viewport-size {
+            background: lightblue;
+            font-weight: bold;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>This viewport size is currently: <span id="viewport-size"></span> <span id="breakpointName"></span></p>
+    <p>Breakpoints: Extra small (default) is &lt; 576 (and up); Small (SM) is ≥ 576px; Medium (MD) is ≥ 768px; Large
+        (LG) is ≥ 992px; Extra Large (XL) is ≥ 1200px.<br />
+
+        <!-- Editing Starts Here -->
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-sm-2">One</div>
+            <div class="col-4 col-sm-2">Two</div>
+            <div class="col-4 col-sm-8">Three</div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-3">Four</div>
+            <div class="col-4 col-sm-4 col-md-6">Five</div>
+            <div class="col-4 col-sm-4 col-md-3">Six</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-4">Seven</div>
+            <div class="col-sm-12 col-lg-4">Eight</div>
+            <div class="col-sm-12 col-lg-4">Nine</div>
+        </div>
+    </div>
+    <!-- Editing Ends Here -->
+    <hr />
+
+    <h3>Resources</h3>
+    <ul>
+        <li>
+            <a href="https://getbootstrap.com/docs/4.0/layout/grid">Bootstrap documentation: Grid system</a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/bootstrap4/bootstrap_grid_basic.asp" target="_blank">W3Schools -
+                Bootstrap Grid Basic</a>
+        </li>
+    </ul>
+
+    <script src="demo.js"></script>
+</body>
+
+</html>
