@@ -149,12 +149,8 @@ footer #nondisclaimer .social .fa-instagram {
 
 /* Home */
 
-
-
-/* ACTIVATE BELOW WHEN TESTING NAVIGATION AND OTHERS FOR RWD */
-
 /* Media Queries */
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     footer #nondisclaimer .copy {
         padding: 3.5em 0em 3.5em 0em;
         text-align: center;
@@ -169,7 +165,7 @@ footer #nondisclaimer .social .fa-instagram {
       }
 }
 
-@media (max-width: 992px) {
+/*@media (max-width: 992px) {
     .logo img {
         position: relative;
         bottom: 8px;
@@ -192,7 +188,7 @@ footer #nondisclaimer .social .fa-instagram {
         min-height: 450px;
         margin-top: 1em;
       }
-} */
+} 
 
 /* Main area */
 
@@ -238,4 +234,20 @@ footer #nondisclaimer .social .fa-instagram {
     #partner .row {
         grid-template-columns: repeat(6, 1fr);
     }
+        padding: 0.1rem 0.5rem; 
+
+}*/
+
+
+
+
+.navbar {
+    right: 220px;
 }
+
+.navbar-brand img {
+    position: relative;
+    bottom: 14px;
+    right: 23px;
+}
+
