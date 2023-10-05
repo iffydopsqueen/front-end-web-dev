@@ -91,8 +91,8 @@ section #partners .partner {
     border-radius: 50%;
 }
 section #partners .partner img {
-    width: 90px;
-    height: 90px;
+    width: 100%;
+    height: auto;
 }
 
 /* Footer */
@@ -203,7 +203,7 @@ footer #nondisclaimer .social .fa-instagram {
 } 
 
 /* Stack in columns */
-.row {
+.container .row {
     max-width: 90%;
     margin: 0 auto;
     display: grid;
@@ -214,5 +214,28 @@ footer #nondisclaimer .social .fa-instagram {
 @media (min-width: 768px) {
     .row {
       grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Partners */
+
+/* Small devices (phones, 576px and above) */
+/*@media (min-width: 576px) {
+    #partner .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+/* Medium devices (landscape tablets, 768px and above) */
+/*@media (min-width: 768px) {
+    #partner .row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and above) */
+/*@media (min-width: 992px) {
+    #partner .row {
+        grid-template-columns: repeat(6, 1fr);
     }
 }
