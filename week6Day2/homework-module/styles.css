@@ -62,10 +62,14 @@ main {
 main h1 {
     font-size: 2.5em;
     padding-bottom: 0.5em;
+    text-align: center;
     color: #9ed034;
 }
 main h2 {
     font-size: 1.7em;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 15px;
 }
 
 /* Partners */
@@ -189,3 +193,26 @@ footer #nondisclaimer .social .fa-instagram {
         margin-top: 1em;
       }
 } */
+
+/* Main area */
+
+/* Bootstrap */
+.container div[class^="col"] {
+    border: 1px solid lightgrey;
+    text-align: left;
+} 
+
+/* Stack in columns */
+.row {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+/* Make 2 columns if screen is greater than 768px */
+@media (min-width: 768px) {
+    .row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
