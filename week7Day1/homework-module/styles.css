@@ -1,12 +1,12 @@
 /* Header */
 header {
     width: 100%;
-    min-height: 400px;
+    min-height: 275px;
     padding-top: 3em;
 }
-#home header {
-    background:  no-repeat lightgrey url(images/cliff_ocean.jpg);
-    background-size: 1500px;
+#home {
+    background:  no-repeat white url(images/cliff_ocean.jpg);
+    background-size: 100% 400px;
 }
 .main-header {
     background-color:rgb(255, 255, 255, 0.8) ;
