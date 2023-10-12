@@ -338,8 +338,10 @@ main {
     padding-bottom: 10px;
 }
 
-fieldset {
-    border-color: #9ed034; 
+form {
+    border: 2px solid #9ed034; 
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
 legend {
@@ -352,6 +354,7 @@ label {
     display: block;
     font-weight: bold;
     margin: 15px 0 0 0;
+    font-size: 12px;
 }
 
 input {
@@ -374,7 +377,7 @@ input[type="radio"] {
 
 /* Increase the size of the textarea */
 textarea {
-    width: 600px;
+    width: 400px;
     height: 200px;
 }
 
@@ -391,29 +394,38 @@ input[type="submit"] {
 
 input[type="text"],
 input[type="email"] {
-    width: 600px;
+    width: 400px;
     height: 30px;
     font-size: 15px;
 }
 
 .textbox, .radios, .selectmenu, .commentbox, .button {
     margin: 23px;
+    font-size: 12px;
 }
 
 .selectmenu select {
-    width: 150px;
-    text-indent: 30%;
+    width: 100px;
+    font-size: 12px;
+    text-align: center;
 }
 
-form .button {
-    margin-left: 485px;
+/* Position the send icon */
+
+/* Adjust the position and remove blue border */
+.button button {
+    margin-left: 230px; /* Adjust margin to position the button */
+    border: none; /* Remove border */
+    background-color: transparent; /* Remove background color */
+    margin-top: 30px;   /* Move button down - space btw the randomcode and btn */
+    width: 120px;    /* Width of the btn */
 }
 
 /* Random Codes Styling */
 
 form .randomcode input {
     width: 150px;
-    margin-left: 351px;
+    margin-left: 155px;
 }
 
 form .randomcode p {

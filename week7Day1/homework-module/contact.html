@@ -2,36 +2,62 @@
 
 <head>
     <!-- Webpage Title -->
-    <title>Contact Us</title>
+    <title>Great Cliffs of California</title>
+
+    <!-- Meta Tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Link my CSS stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body id="contact" onload="disableButton(true)">
     <div id="container">
-        <header>
-            <div class="main-header">
-                <!-- Logo container -->
-                <div class="logo">
+        <header></header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark main-menu sticky-top">
+            <div class="logo">
+                <a class="navbar-brand" href="#">
                     <!-- Added only width because we want to scale down by half of the original dimension -->
                     <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
-                </div>
-                <!-- Main menu navigation -->
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="cliffs.html">Cliffs</li>
-                        <li><a href="activities.html">Activities</a></li>
-                        <li class="active"><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                </a>
             </div>
-        </header>
+
+            <!-- Hamburger Menu -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    <!-- The purpose of the "class=active" is to style the home button to be highlighted when users are on that page -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cliffs.html">Cliffs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activities.html">Activities</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <!-- Main content -->
-        <main>
+        <main class="container">
             <h1>Contacting Us</h1>
             <p>
                 You can drop by the visitors information center at the cliff site that you plan on visiting. They are
@@ -90,54 +116,66 @@
                         <p id="codes"></p>
                     </div>
 
-                    <div class="button">
-                        <input id="submit" type="submit" value="Inquire">
+                    <!--<div class="button mt-3">
+                        <input id="submit" type="submit" class="btn btn-primary" value="SEND">
+                        <i class="fa fa-send"></i>  Add the send icon -->
+                    <!--</div>-->
+
+                    <div class="button mt-3">
+                        <button id="submit" type="submit" class="btn btn-primary">
+                            <i class="fa fa-send"></i> SEND
+                        </button>
                     </div>
                 </fieldset>
             </form>
         </main>
+
         <!-- Sections -->
         <section>
-            <ul id="partners">
-                <!--
-                <li class="partner">
-                    <img src="images/partners/partner1.png" alt="Partner Bus Tours">
+            <ul id="partners" class="row">
+                <li class="partner col-6 col-sm-6 col-md-4 col-lg-2">
+                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
                 </li>
-                <li class="partner">
-                    <img src="images/partners/partner2.png" alt="Partner Cabin Rental">
+                <li class="partner col-6 col-sm-6 col-md-4 col-lg-2">
+                    <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
                 </li>
-                <li class="partner">
-                    <img src="images/partners/partner3.png" alt="Partner Camping Adventure">
+                <li class="partner col-6 col-sm-6 col-md-4 col-lg-2">
+                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
                 </li>
-                <li class="partner">
-                    <img src="images/partners/partner4.png" alt="Partner College Tours">
+                <li class="partner col-6 col-sm-6 col-md-4 col-lg-2">
+                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
                 </li>
-                <li class="partner">
-                    <img src="images/partners/partner5.png" alt="Partner Bike Rentals">
+                <li class="partner col-6 col-sm-6 col-md-4 col-lg-2">
+                    <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
                 </li>
-                <li class="partner">
-                    <img src="images/partners/partner6.png" alt="Partner Tour Group">
+                <li class="partner col-6 col-sm-6 col-md-4 col-lg-2">
+                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
                 </li>
-                -->
             </ul>
         </section>
+
         <!-- Footer -->
         <footer>
-            <!-- Non-disclaimer footer -->
+            <!-- Nondisclaimer -->
             <div id="nondisclaimer">
-                <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+                <div class="copy">&copy; Copyright 2021 :: GreatCliffs.com</div>
                 <div class="social">
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-twitter"></a>
                 </div>
             </div>
-            <!-- Disclaimer footer -->
+            <!-- End Nondisclaimer -->
+
+            <!-- Disclaimer -->
             <div id="disclaimer">
-                <p>This website is designed and created solely for educational purposes only at Westcliff
-                    University.
-                    All contents are not intended for any commercial gain or use.</p>
+                <p>
+                    This website is designed and created solely for educational purposes
+                    only at Westcliff University. All contents are not intended for any
+                    commercial gain or use.
+                </p>
             </div>
+            <!-- End Disclaimer -->
         </footer>
     </div>
     <!-- JavaScript Codes -->
@@ -148,6 +186,15 @@
 
     <!-- Random Codes -->
     <script src="js/randomcodes.js"></script>
+
+    <!-- Bootstrap jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
