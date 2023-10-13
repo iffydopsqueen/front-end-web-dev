@@ -1,41 +1,42 @@
-/* Using jQuery to highlight cells in the table */
 $(document).ready(function() {
     // Define cliff site names
     var cliffSites = ["West Cliff", "North Cliff", "East Cliff", "South Cliff"];
 
-    // Remove initial selected class
-    $("table tbody td.selected").removeClass("selected");
+    // Function to update the modal with selected activities
+    function updateModal(selectedActivities) {
+        var selectedActivitiesList = $('#selectedActivitiesList');
+        selectedActivitiesList.empty();  // Clear the list
 
-    // Function handle cell click
-    $("table tbody td").click(function() {   // user select a table data cell
-        var content = $(this).text();    // get content of cell
-        var columnIndex = $(this).index(); // Get the column index
+        // Populate the list with selected activities
+        selectedActivities.forEach(function(activity) {
+            selectedActivitiesList.append(activity + '<br><br>');
+        });
+    }
+
+    // Remove initial highlighting on page load
+    $('#activities table tbody td').removeClass('selected');
+
+    // Function to handle cell click
+    $("table tbody td").click(function () {
 
         // check if the cell is selectable 
         if (!$(this).hasClass("not-selectable")) {
-            // toggle cell selection
+            // Toggle the 'selected' class
             $(this).toggleClass("selected");
 
-            if($(this).hasClass("selected")) {     // check if selected cell has class
-                // Get the cliff site name based on the column index
-                var cliffSite = cliffSites[columnIndex - 1]; // Subtract 1 for activity column
+            // Update the modal content based on selected activities
+            var selectedActivities = [];
+            $('#activities table tbody td.selected').each(function () {
+                var activity = $(this).text();
+                var cliffSite = cliffSites[$(this).index() - 1];
+                selectedActivities.push(activity + ' at ' + cliffSite);
+            });
 
-                $('#displaySelected').css("visibility", "visible");   // make display box visible 
-                $('#displaySelected').css("margin-top", "2em");    // add spaces above display box 
+            // Update the modal with selected activities
+            updateModal(selectedActivities);
 
-                // Append selected activity and cliff site to result
-                $('#result').append("<p>" + content + " at <span style='background-color: lightblue;'>" + cliffSite + "</span></p>");    // add child element with contents of cell 
-            } else {   
-                // if selected cell don't have class 
-                // Remove the selected activity from result
-                $('#result p:contains(' + content + ')').remove();
-
-                if($('#result').has('p').length === 0) {   // check if there are any child elements within parent 
-                    // Hide the display box if no selected activities
-                    $('#displaySelected').css("visibility", "hidden");   // make display box hidden
-                    $('#displaySelected').css("margin-top", "0");    // remove spaces above display box 
-                }
-            } 
+            // Open the modal
+            $('#selectedActivitiesModal').modal('show');
         }
     });
 });
