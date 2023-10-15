@@ -1,0 +1,552 @@
+/* Header */
+header {
+    /* Styling for the header */
+    width: 100%;
+    min-height: 400px;
+    padding-top: 3em;
+}
+
+#home {
+    background:  no-repeat white url(images/cliff_ocean.jpg);
+    background-size: 100% 400px;
+}
+
+#activities {
+    /* Use the "runfly" image as a background */
+    background: no-repeat white url(images/runfly.jpg);
+    background-size: 100% 400px;
+}
+
+#contact {
+    /* Use the "cliff_rock" image as a background */
+    background: no-repeat white url(images/cliff_rock.jpg);
+    background-size: 100% 400px;
+}
+
+#cliffs {
+    /* Use the "cliff_rock" image as a background */
+    background: no-repeat white url(images/forest_cliff.jpg);
+    background-size: 100% 400px;
+}
+
+.main-header {
+    /* Style the main header box that contains the logo and navigation labels */
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 700px;
+    margin: 2em auto 0 auto;
+    min-height: 100px;
+    height: 100px;
+}
+
+.main-header .logo img {
+    /* Re-position the logo graphic within the main header box */
+    width: 100px;
+    height: 100px;
+    margin: 0 2em 0 0;
+    float: left;
+}
+
+/* Navigation */
+
+
+.navbar {
+    right: 250px;
+}
+
+.navbar-brand img {
+    position: relative;
+    right: 15px;
+    bottom: 3;
+    padding: 0;
+}
+
+.main-menu {
+    /* Re-position the navigation menu within the main header box */
+    font-weight: 400;
+    background-color: rgba(38, 41, 61, 0.7);
+    position: absolute;
+    margin: 3em 8em 0 auto;
+    height: 115px;
+    /*width: 700px;*/
+}
+
+.main-menu ul li {
+    /* Remove the navigation label bullets and make them appear horizontal instead of vertical, Create a faint vertical line border */
+    list-style-type: none;
+    display: inline-block;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-left: 1px solid rgba(202, 204, 202, 0.6);
+}
+
+.main-menu ul li a {
+    /* Modify the look of the hypertext links and get rid of the underlines */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #888;
+}
+
+.main-menu ul li a:hover {
+    /* Change the font color of the links and create a mouse hovering effect */
+    color: #9ed034;
+}
+
+.main-menu ul li.active {
+    /* Highlight the home button when a user is on the page */
+    background: #9ed034;
+    border: none;
+}
+
+.main-menu ul li.active a {
+    /* Highlight the home button when a user is on the page - Adds a status indicator */
+    color: #fff;
+}
+
+/* Main */
+
+main {
+    padding: 3em 6em 3em 5.5em;
+    margin: 2em 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main h1 {
+    font-size: 2.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: #9ed034;
+}
+
+.main-content h2 {
+    text-align: center;
+    color: #9ed034;
+    font-size: 2.5em;
+}
+
+.main-content p {
+    text-align: left;
+    margin-left: 150px;
+}
+
+main h2 {
+    font-size: 1.7em;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.main-content {
+    margin: 50px;
+}
+
+/* Cliffs Images */
+.image-grid {
+    margin-left: 55px;
+    margin-top: 35px;
+}
+
+.image-grid img {
+    max-width: 500px; /* Limit the image width to 200 pixels */
+    max-height: 450px; /* Limit the image height to 150 pixels */
+    align-items: center;
+    text-align: center;
+}  
+
+.image-container {
+    position: relative;   /* Create a positioning context for captions */
+    margin-bottom: 25px; /* The space/gap between the images */ 
+    display: inline-block;  /* Have more than one image in a line */
+}
+  
+.caption {
+    position: absolute;
+    top: 0; /* Place caption at the top of the image */
+    background-color: #852b1b;
+    color: white; 
+    padding: 10px;  /* The height of the border box */
+    width: 100%;   /* Caption box should fill the image */
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .image-container {
+        margin-bottom: 15px;
+    }
+}
+
+/* Partners */
+section {
+    width: 100%;
+    background-color: #4288c3;
+}
+
+section #partners {
+    /* Center the logos/icons within the section area */
+    width: 1200px;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section #partners .partner {
+    /* Make each partner's logo/icon to appear within a circular shape */
+    display: inline-block;
+    margin: 0 0.75em;
+    padding: 1.3em 1.5em;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+section #partners .partner img {
+    width: 90px;
+    height: 90px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 155px;
+    padding-bottom: 1em;
+    background-color: #ecfab8;
+}
+
+/* Position the copyright on the left and social media on the right */
+footer #nondisclaimer .copy {
+    padding: 3.5em 3.5em 3.5em 13em;
+    float: left;
+    font-size: 0.9em;
+}
+
+footer #nondisclaimer .social {
+    padding: 2.5em;
+    margin-right: 9.25em;
+    float: right;
+}
+
+/* Forcing the disclaimer to the bottom of the page */
+footer #disclaimer {
+    clear: both;
+}
+
+footer #disclaimer p {
+    font-size: 0.85em;
+    text-align: center;
+}
+
+/* Styling the "font awesome"  social medias to appear as icons and also a hover effect */
+footer #nondisclaimer .social .fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+
+footer #nondisclaimer .social .fa:hover {
+    opacity: 0.7;
+}
+
+/* Styling the social media icons to appear in round shapes */
+footer #nondisclaimer .social .fa-facebook {
+    background: #3b5998;
+    color: white;
+}
+
+footer #nondisclaimer .social .fa-twitter {
+    background: #55acee;
+    color: white;
+}
+
+footer #nondisclaimer .social .fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+/* Activities */
+
+table {
+    width: 1000px;
+    margin: 4em auto 0 auto;
+    margin-bottom: 70px;
+}
+
+caption {
+    background: #852b1b;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    caption-side: top; /* Add this line to position the caption at the top */
+}
+
+thead {
+    background: #bde1ff;
+    text-align: center;
+}
+
+tbody {
+    background: #eeffe6;
+    text-align: center;
+}
+
+th,td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #852b1b;
+}
+
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #4977d1;
+    color: #fff;
+}
+
+td:first-child {
+    font-weight: bold;
+    background: #bde1ff;
+}
+
+/* Contact */ 
+main h1 {
+    color: #9ed034;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contactinfo {
+    padding-bottom: 15px;
+}
+
+.contactinfo span:first-child {
+    font-weight: bold;
+}
+
+.contactinfo .phone {
+    padding-bottom: 10px;
+}
+
+form {
+    border: 3px solid #9ed034; 
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #4977d1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+    font-size: 12px;
+}
+
+input {
+    width: 300px;
+}
+
+/* Bring the text closer to the button */
+input[type="radio"] {
+    width: 15px;
+}
+
+/* Display the labels and fields on the same line */
+.radios label {
+    display: inline;
+}
+
+.selectmenu label {
+    display: inline;
+}
+
+/* Increase the size of the textarea */
+textarea {
+    width: 400px;
+    height: 200px;
+}
+
+input[type="submit"] {
+    margin: 10px 0 10px 0;
+    width: 130px;
+    height: 35px;
+    background-color: #4977d1; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 400px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.textbox, .radios, .selectmenu, .commentbox, .button {
+    margin: 23px;
+    font-size: 12px;
+}
+
+.selectmenu select {
+    width: 100px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Position the send icon */
+
+/* Adjust the position and remove blue border */
+.button button {
+    margin-left: 230px; /* Adjust margin to position the button */
+    border: none; /* Remove border */
+    background-color: transparent; /* Remove background color */
+    margin-top: 30px;   /* Move button down - space btw the randomcode and btn */
+    width: 120px;    /* Width of the btn */
+}
+
+/* Random Codes Styling */
+
+form .randomcode input {
+    width: 150px;
+    margin-left: 155px;
+}
+
+form .randomcode p {
+    border: solid 1px none;
+    background-color: #BEBEBE;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    line-height: 40px;
+}
+
+form .randomcode {
+    height: 25px;
+}
+
+/* Home Area Styles */
+
+#timeofday {
+    width: 100%;
+    padding: 20px 0;
+    color: #125688;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(0deg, rgba(251, 215, 139, 1) 0%, rgba(118, 213, 245, 1) 100%);
+}
+
+#timeofday span:first-child {
+    color: #000;
+}
+
+/* Table Highlight Styling */
+
+/* highlight selected cells */
+td.selected {
+    background-color: #9ed034;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* add hand cursor on selectable cells */
+td:not(.not-selectable) {
+    cursor: pointer;
+}
+
+/* Selecting Activities on the Table */
+
+#activities main #displaySelected {
+    visibility: hidden;
+    margin: 0 auto 100px;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+
+#activities main #displaySelected #result, 
+#activities main #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+
+#activities main #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+
+#activities main #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+
+#activities main #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
+
+/* Adjust the position of the selected activities in the modal */
+#selectedActivitiesList {
+    text-align: left;
+    padding-left: 5px; /* Add padding for left alignment */
+}
+
+/* Home */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    footer #nondisclaimer .copy {
+        padding: 3.5em 0em 3.5em 0em;
+        text-align: center;
+        float: none;
+        font-size: 0.9em;
+      }
+      footer #nondisclaimer .social {
+        padding: 2.5em 0;
+        margin: 0;
+        text-align: center;
+        float: none;
+      }
+}
+
+/* Main area */
+
+/* Bootstrap */
+.container main div[class^="col"] {
+    border: 1px solid lightgrey;
+    text-align: left;
+} 
+
+/* Stack in columns */
+.container .row {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+/* Make 2 columns if screen is greater than 768px */
+@media (min-width: 768px) {
+    .row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
