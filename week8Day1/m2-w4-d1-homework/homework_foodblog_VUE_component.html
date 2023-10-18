@@ -97,7 +97,6 @@
     <aside id="leftside"></aside>
     <aside id="rightside"></aside>
 
-    <!-- Define VUE template -->
     <div id="app">
         <div id="container">
             <header><span>Food Blog</span></header>
@@ -109,33 +108,11 @@
                 <h2>Comments</h2>
 
                 <section id="blogposts">
-                    <div v-for="(post, index) in posts1" :key="index" class="post">
-                        <span class="author">{{ post.author }}</span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
-                    </div>
-
-                    <div v-for="(post, index) in posts2" :key="index" class="post">
-                        <span class="author">{{ post.author }}</span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
-                    </div>
-
-                    <div v-for="(post, index) in posts3" :key="index" class="post">
-                        <span class="author">{{ post.author }}</span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
-                    </div>
-
-                    <div v-for="(post, index) in posts4" :key="index" class="post">
-                        <span class="author">{{ post.author }}</span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
-                    </div>
+                    <!-- Use the BlogPost component -->
+                    <blog-post v-for="(post, index) in posts1" :key="index" :post="post"></blog-post>
+                    <blog-post v-for="(post, index) in posts2" :key="index" :post="post"></blog-post>
+                    <blog-post v-for="(post, index) in posts3" :key="index" :post="post"></blog-post>
+                    <blog-post v-for="(post, index) in posts4" :key="index" :post="post"></blog-post>
                 </section>
             </main>
 
@@ -146,7 +123,20 @@
     </div>
 
     <script>
-        // Define a VUE instance 
+        // Define a BlogPost component
+        Vue.component('blog-post', {
+            props: ['post'],
+            template: `
+                <div class="post">
+                    <span class="author">{{ post.author }}</span> —
+                    <span class="date">{{ post.date }}</span>
+                    <span class="reply">REPLY</span>
+                    <p>{{ post.content }}</p>
+                </div>
+            `
+        });
+
+        // Define a VUE instance
         new Vue({
             el: "#app",
             data: {
