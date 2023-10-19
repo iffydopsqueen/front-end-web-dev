@@ -153,7 +153,7 @@
                     <div v-for="(post, index) in posts1" :key="index" class="post">
                         <span class="author">
                             <!-- Add a clickable profile image -->
-                            <img src="images/profile.png" alt="Profile Image" width="40"
+                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
                                 @click="showProfile(post.author)">
                             {{ post.author }}
                         </span> —
@@ -165,7 +165,7 @@
                     <div v-for="(post, index) in posts2" :key="index" class="post">
                         <span class="author">
                             <!-- Add a clickable profile image -->
-                            <img src="images/profile.png" alt="Profile Image" width="40"
+                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
                                 @click="showProfile(post.author)">
                             {{ post.author }}
                         </span> —
@@ -177,7 +177,7 @@
                     <div v-for="(post, index) in posts3" :key="index" class="post">
                         <span class="author">
                             <!-- Add a clickable profile image -->
-                            <img src="images/profile.png" alt="Profile Image" width="40"
+                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
                                 @click="showProfile(post.author)">
                             {{ post.author }}
                         </span> —
@@ -189,7 +189,7 @@
                     <div v-for="(post, index) in posts4" :key="index" class="post">
                         <span class="author">
                             <!-- Add a clickable profile image -->
-                            <img src="images/profile.png" alt="Profile Image" width="40"
+                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
                                 @click="showProfile(post.author)">
                             {{ post.author }}
                         </span> —
