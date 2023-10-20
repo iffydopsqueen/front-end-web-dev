@@ -1,0 +1,122 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#leftside {
+    float: left;
+    width: 30%;
+    min-height: 1200px;
+    background-color: rgb(77, 192, 154);
+}
+
+#rightside {
+    float: left;
+    width: 70%;
+    min-height: 1200px;
+    background-color: rgb(238, 226, 192);
+    position: relative;
+}
+
+#container {
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    min-width: 1100px;
+    min-height: 1050px;
+    border-radius: 0.7em;
+}
+
+header {
+    height: 50px;
+    background-color: rgba(231, 229, 229, 0.5);
+    font-size: 2.75em;
+    padding: 0.5em;
+    color: rgb(216, 150, 7);
+}
+
+header span {
+    font-family: 'Sacramento', cursive;
+}
+
+main {
+    position: relative;
+}
+
+main h2 {
+    position: absolute;
+    left: 20%;
+    top: 30px;
+    margin: 25px 0 200px 50px;
+    color: rgb(60, 190, 160);
+    text-transform: uppercase;
+}
+
+main #photos img {
+    margin: 0.75em;
+    border: 0.85em solid rgb(255, 255, 255);
+}
+
+section#blogposts {
+    position: absolute;
+    left: 20%;
+    top: 70px;
+    padding: 50px;
+}
+
+main .post {
+    margin: 25px;
+    padding: 25px;
+    border: 2px solid rgba(83, 78, 58, 0.6);
+    border-radius: 0.5em;
+}
+
+footer {
+    position: absolute;
+    top: 98%;
+    /* Move copyright a little down */
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+/* Additional CSS styles for the profile box - floating box */
+.profile-box {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Adjust the alpha value (0.9) for the desired transparency */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    /* rounded the edges of the box */
+    z-index: 1;
+    left: 50%;
+    /* Center horizontally */
+    top: 50%;
+    /* Center vertically */
+    transform: translate(-50%, -50%);
+    /* Center the box */
+    width: 330px;
+    height: 270px;
+}
+
+.profile-box h2 {
+    margin: 0;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.profile-box p {
+    margin: 0;
+}
+
+.profile-box button {
+    background: transparent;
+    border: none;
+    color: rgb(60, 190, 160);
+    cursor: pointer;
+    font-size: 15px;
+    padding-top: 50px;
+}
