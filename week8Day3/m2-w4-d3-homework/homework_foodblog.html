@@ -32,90 +32,96 @@
     <div id="app">
         <div id="container">
             <!-- <span>Food Blog</span> -->
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <span>Food Blog</span>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Recipes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Lifestyles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Videos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                        </ul>
+            <header class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <span>Food Blog</span>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Recipes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Lifestyles</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Videos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </header>
 
             <main>
-                <aside id="photos">
-                    <img src="images/chili.jpg" alt="White Chicken Chili" width="180">
-                </aside>
-                <h2>Comments</h2>
-
-                <section id="blogposts">
-                    <div v-for="(post, index) in posts1" :key="index" class="post">
-                        <span class="author">
-                            <!-- Add a clickable profile image -->
-                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
-                                @click="showProfile(post.author)">
-                            {{ post.author }}
-                        </span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <aside id="photos">
+                            <img src="images/chili.jpg" alt="White Chicken Chili" width="180">
+                        </aside>
                     </div>
 
-                    <div v-for="(post, index) in posts2" :key="index" class="post">
-                        <span class="author">
-                            <!-- Add a clickable profile image -->
-                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
-                                @click="showProfile(post.author)">
-                            {{ post.author }}
-                        </span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
-                    </div>
+                    <h2>Comments</h2>
+                    <section id="blogposts">
+                        <div v-for="(post, index) in posts1" :key="index" class="post">
+                            <span class="author">
+                                <!-- Add a clickable profile image -->
+                                <img :src="'images/profile.png'" alt="Profile Image" width="40"
+                                    @click="showProfile(post.author)">
+                                {{ post.author }}
+                            </span> —
+                            <span class="date">{{ post.date }}</span>
+                            <span class="reply">REPLY</span>
+                            <p>{{ post.content }}</p>
+                        </div>
 
-                    <div v-for="(post, index) in posts3" :key="index" class="post">
-                        <span class="author">
-                            <!-- Add a clickable profile image -->
-                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
-                                @click="showProfile(post.author)">
-                            {{ post.author }}
-                        </span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
-                    </div>
+                        <div v-for="(post, index) in posts2" :key="index" class="post">
+                            <span class="author">
+                                <!-- Add a clickable profile image -->
+                                <img :src="'images/profile.png'" alt="Profile Image" width="40"
+                                    @click="showProfile(post.author)">
+                                {{ post.author }}
+                            </span> —
+                            <span class="date">{{ post.date }}</span>
+                            <span class="reply">REPLY</span>
+                            <p>{{ post.content }}</p>
+                        </div>
 
-                    <div v-for="(post, index) in posts4" :key="index" class="post">
-                        <span class="author">
-                            <!-- Add a clickable profile image -->
-                            <img :src="'images/profile.png'" alt="Profile Image" width="40"
-                                @click="showProfile(post.author)">
-                            {{ post.author }}
-                        </span> —
-                        <span class="date">{{ post.date }}</span>
-                        <span class="reply">REPLY</span>
-                        <p>{{ post.content }}</p>
-                    </div>
-                </section>
+                        <div v-for="(post, index) in posts3" :key="index" class="post">
+                            <span class="author">
+                                <!-- Add a clickable profile image -->
+                                <img :src="'images/profile.png'" alt="Profile Image" width="40"
+                                    @click="showProfile(post.author)">
+                                {{ post.author }}
+                            </span> —
+                            <span class="date">{{ post.date }}</span>
+                            <span class="reply">REPLY</span>
+                            <p>{{ post.content }}</p>
+                        </div>
+
+                        <div v-for="(post, index) in posts4" :key="index" class="post">
+                            <span class="author">
+                                <!-- Add a clickable profile image -->
+                                <img :src="'images/profile.png'" alt="Profile Image" width="40"
+                                    @click="showProfile(post.author)">
+                                {{ post.author }}
+                            </span> —
+                            <span class="date">{{ post.date }}</span>
+                            <span class="reply">REPLY</span>
+                            <p>{{ post.content }}</p>
+                        </div>
+                    </section>
+                </div>
             </main>
 
             <!-- Floating profile box -->
